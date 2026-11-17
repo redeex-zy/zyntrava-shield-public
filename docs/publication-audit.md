@@ -1,5 +1,9 @@
 # Public source audit and selection
 
+This document preserves historical preparation observations. For current private
+repository/contact status and owner confirmations, see the final update at the end,
+[security policy](../SECURITY.md) and [release gates](release-readiness.md).
+
 This is developer-assisted release preparation, not independent security auditing
 or legal clearance. Publication remains blocked on creator decisions and a verified
 confidential reporting channel. Use a **new selected repository**, never change the
@@ -134,6 +138,25 @@ name provisionally and conditionally accepts the bundled Next residual under
 trusted-build/manual-CI/source-only restrictions. Public publication remains
 unauthorized. A separate candidate applies manual-only CI and accurate reporting
 plans without changing engine code, research evidence or the sealed predecessor.
-Current decisions and private reporting alternatives are in release-readiness and
-security-reporting-setup. No actual reporting channel, remote or hosted validation
-is claimed; historical audit figures above are not relabeled as new measurements.
+At that preparation stage no actual reporting channel, remote or hosted validation
+was claimed; historical audit figures above are not relabeled as new measurements.
+
+## Final private release-candidate update
+
+The owner subsequently authorized the separate PRIVATE repository
+`redeex-zy/zyntrava-shield-public` and its reviewed documentation merge. The original
+research repository remains PRIVATE. Original approved source commit
+`49402a1c615ebadf692c927845cb14e9d7581606`, sealed archives, corpora and evidence remain preserved.
+
+`zyntrava.security@gmail.com` is the owner-designated contact. The owner confirms
+email receipt, reply, Gmail notifications, enabled Google 2-Step Verification and
+reviewed GitHub App permissions. These are owner attestations, not independent
+tests; mailbox delegates/forwarding/unauthorized-user access are not claimed verified.
+Apache-2.0 is approved only for cleared source, the name is provisionally approved,
+and the Next.js/picomatch residual remains conditionally accepted under trusted-build,
+manual-CI and source-only restrictions. No trademark clearance or upstream fix is claimed.
+
+The exact current source archive, hashes, included-file inventory and newly executed
+checks are in the final delivery manifest/report. Historical results above keep their
+original scope. Public publication remains unauthorized and requires final owner
+review/approval plus resolution or explicit acceptance of remaining reporting assurance.

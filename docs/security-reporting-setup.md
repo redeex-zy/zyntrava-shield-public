@@ -1,30 +1,37 @@
 # Confidential reporting setup and verification
 
 **Contact: [zyntrava.security@gmail.com](mailto:zyntrava.security@gmail.com).**
-**Status: PARTIALLY VERIFIED — email receipt and reply verified by the owner.**
+**Status: OWNER-CONFIRMED email receipt, reply, notifications and account controls;
+not independently verified.**
 The owner reports successful receipt of a test email from another account and
 successful delivery of a reply from the security inbox to that sender. No inbox
 messages or mail headers were inspected by the development assistant; this is
 owner-attested verification, not an independently reproduced test.
-**Notification delivery and access-control testing have not been completed.**
-Full reporting-process verification and public publication remain NO-GO until the
-remaining checks and separate release approvals are complete. Version **0.9.1a1**
+The owner additionally confirms that **Gmail notifications work**, **Google 2-Step
+Verification is enabled**, and **GitHub App permissions have been reviewed**.
+No independent inbox/account/app inspection or unauthorized-access test is claimed.
+Delegates, forwarding and unauthorized-user access testing have not been reported
+complete. Public publication remains unauthorized and subject to the final source
+review, remaining assurance decisions and explicit approval. Version **0.9.1a1**
 remains experimental. This update sends no email and creates no account, repository,
 collaborator or advisory.
 
-## Observed private-staging configuration — 17 November 2026
+## Preserved baseline observations and owner confirmations — 17 November 2026
 
 - Both `redeex-zy/zyntrava-shield` and `redeex-zy/zyntrava-shield-public` are PRIVATE.
-- Staging main remains `49402a1c615ebadf692c927845cb14e9d7581606`.
+- Original approved main `49402a1c615ebadf692c927845cb14e9d7581606` is preserved in
+  history. The final private candidate revision is identified in its delivery manifest.
 - An authenticated owner with repository admin access attempted the documented
   `PUT repos/redeex-zy/zyntrava-shield-public/private-vulnerability-reporting`.
   GitHub returned HTTP 404. GET before and after also returned HTTP 404. Native
   reporting is unavailable through the tested private configuration and is not verified.
 - The CLI token has `repo` and `workflow` scopes; it has no `notifications` scope.
   GET of the repository subscription returned 404 with an explicit missing-scope
-  diagnostic. This does not prove notifications are disabled; they are unverified.
+  diagnostic. This does not prove notifications are disabled. Gmail notification
+  delivery is now owner-confirmed; GitHub notification preferences remain unverified.
 - The token cannot enumerate GitHub App installations (403, different token type
-  required). Do not infer absence of account-wide apps or forwarding from zero hooks.
+  required). The owner now confirms reviewing GitHub App permissions; this does
+  not become an independent API audit or prove absence of forwarding/external access.
 - The manual-only CI, read-only workflow token, source-only distribution limits and
   original source commit are unchanged. A documentation branch is not a new approved ZIP.
 
@@ -66,19 +73,21 @@ stored in Git, or pasted into a report. This task sends no email from any accoun
    verified protected exchange before highly sensitive material. Do not advertise
    encryption or an OpenPGP key that has not been configured and verified.
 6. **Complete the remaining harmless checks below.** Preserve the owner's successful
-   receipt/reply results; do not relabel them as assistant-executed or independently
-   audited. Notification delivery, effective access and forwarding/delegates/apps
-   still require verification. Do not contact external researchers, create accounts
+   receipt/reply and Gmail notification results; do not relabel them as assistant-executed
+   or independently audited. Google 2-Step Verification and GitHub App review are
+   owner-confirmed. Effective mailbox access and forwarding/delegates still need
+   review/testing. Do not contact external researchers, create accounts
    or send mail automatically.
 7. **Record evidence privately.** Apart from the approved security contact, keep
    sender addresses, mail headers, receipts, identities and access-control details
    outside Git. Record only sanitized result
    summaries in release documents. A test marker is correlation text, not a credential.
 8. **Keep status precise.** SECURITY.md lists the owner-designated contact and
-   distinguishes receipt/reply verification from incomplete notification/access
+   distinguishes owner-confirmed controls from incomplete independent/access
    testing. Update that status only after additional evidence exists. Public
    publication requires separate approval and a reviewed/resealed changed source
-   candidate. Do not modify the original sealed ZIP or merge this branch into main.
+   candidate. The owner separately authorizes the normal private documentation merge;
+   preserve the original commit/ZIP. This does not authorize public publication.
 
 ### Email configuration and verification worksheet
 
@@ -87,22 +96,24 @@ stored in Git, or pasted into a report. This task sends no email from any accoun
 | Dedicated destination | `zyntrava.security@gmail.com`, explicitly supplied and authorized by the owner |
 | Inbound email receipt | VERIFIED BY OWNER: test from another account was received |
 | Reply delivery | VERIFIED BY OWNER: reply reached the original sender |
-| Notification delivery | NOT VERIFIED; no completed notification test claimed |
+| Gmail notification delivery | VERIFIED BY OWNER; not independently reproduced |
+| Google 2-Step Verification | ENABLED, as confirmed by owner; no account settings inspected |
+| GitHub App permissions | REVIEWED BY OWNER; no independent app-access audit |
 | Access controls/readers/delegates | NOT VERIFIED; review actual readers and integrations |
 | Forwarding/ticketing rules | NOT VERIFIED; confirm no public/unapproved exports |
-| Authentication/recovery | Owner review still required; no credentials or recovery secrets in Git |
+| Authentication/recovery | Owner confirms 2-Step Verification; recovery/delegation details not independently reviewed |
 | Spam handling/retention | Owner review still required; no test result claimed |
-| Documentation approval | Contact approved on PRIVATE preparation branch; no public-release authorization |
+| Documentation approval | Owner authorizes private main merge and source candidate; no public-release authorization |
 
 No SMTP credentials, private mail headers or fabricated destination are provided.
 The current GitHub token cannot inspect the Gmail inbox. The owner's receipt/reply
-statement is the evidence recorded here; it does not verify notification settings,
-access controls, delegates, forwarding, MFA or retention.
+and subsequent confirmations are the evidence recorded here. They are not independent
+verification of notifications, account controls, delegates, forwarding or retention.
 
-## Harmless verification — owner-verified receipt/reply; remaining checks incomplete
+## Harmless verification — owner-confirmed checks and remaining assurance limits
 
 Use synthetic text only. Do not use a real vulnerability as the test. Preserve the
-owner-reported successful receipt and reply; no exact test time, sender identity,
+owner-reported successful receipt, reply and Gmail notifications; no exact test time, sender identity,
 marker or private receipt artifact was supplied to the assistant. Do not invent
 those details. Record additional evidence privately as the remaining tests run.
 
@@ -127,20 +138,25 @@ those details. Record additional evidence privately as the remaining tests run.
    decision. Closing or deletion does not erase provider backups or delivered copies.
 8. Mark the full process VERIFIED only after submission, receipt, reply, required
    notifications, access controls and correct SECURITY.md instructions pass.
-   The owner-verified receipt/reply results remain valid as owner attestations;
-   untested notification/access steps remain NOT VERIFIED and block full publication sign-off.
+   Owner-confirmed receipt/reply, Gmail notifications, 2-Step Verification and GitHub
+   App review remain owner attestations. Unreported mailbox-access tests remain
+   unverified; record their completion or an explicit owner assurance/risk decision
+   before full reporting-process sign-off. Public release always needs separate approval.
 
 Private test record (do not commit sender addresses, inbox artifacts or report URLs;
 the designated security contact above is explicitly owner-approved):
 
 ```json
 {
-  "channel_status": "PARTIALLY VERIFIED",
+  "channel_status": "OWNER-CONFIRMED OPERATION; INDEPENDENT/ACCESS TESTS INCOMPLETE",
   "submission": "OWNER-REPORTED TEST FROM ANOTHER ACCOUNT",
   "owner_receipt": "VERIFIED BY OWNER",
   "private_reply": "VERIFIED BY OWNER: REACHED ORIGINAL SENDER",
-  "evidence_basis": "Owner statement; no inbox artifacts inspected by assistant",
-  "notification_delivery": "NOT VERIFIED",
+  "evidence_basis": "Owner statements; no inbox/account artifacts inspected by assistant",
+  "gmail_notification_delivery": "VERIFIED BY OWNER",
+  "google_two_step_verification": "ENABLED AS CONFIRMED BY OWNER",
+  "github_app_permission_review": "CONFIRMED BY OWNER",
+  "github_notification_preferences": "NOT VERIFIED",
   "unauthenticated_access_denied": "NOT TESTED",
   "unrelated_account_access_denied": "NOT TESTED",
   "delegates_apps_forwarding_review": "NOT VERIFIED",
@@ -155,7 +171,7 @@ Maintain the verified email route during any migration. This procedure does not
 authorize changing repository visibility. Public publication must first pass its
 separate owner approval and other release gates. Completing the remaining email
 verification can satisfy the reporting gate without making staging public for a test;
-receipt and reply alone do not complete the notification/access-control requirements.
+owner-confirmed operational checks do not independently verify mailbox access control.
 
 1. After separately approved publication, confirm the intended repository's actual
    owner/name and PUBLIC visibility. The original research repository stays PRIVATE.

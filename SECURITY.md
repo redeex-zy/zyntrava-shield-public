@@ -4,8 +4,8 @@
 
 **0.9.1a1** is the only version currently accepted for experimental security review.
 The approved staging baseline is `49402a1c615ebadf692c927845cb14e9d7581606`.
-This policy update is prepared separately; it does not replace that sealed source
-candidate or authorize publication. There is no supported stable/production release,
+The original commit and sealed archive are preserved; this policy accompanies a
+new PRIVATE release candidate and does not authorize publication. There is no supported stable/production release,
 response-time commitment or promised support lifetime. Independent adversarial
 security auditing is incomplete. No security tool guarantees protection.
 
@@ -16,13 +16,15 @@ Send private vulnerability reports to
 Do not disclose vulnerability details publicly in issues, discussions or pull
 requests before coordinating a private reporting and disclosure plan.
 
-**Verification status: owner-verified email receipt and reply only.** The owner
+**Verification status: owner-confirmed email operation and account controls.** The owner
 reports that a test email from another account was received by this inbox and that
-a reply from the security inbox reached the original sender. This statement records
-the owner's verification; the development assistant did not inspect inbox messages
-or independently reproduce those tests. **Notification delivery and access-control
-testing have not been completed.** Full reporting-process verification remains
-incomplete and is a publication blocker. Do not include real secrets or sensitive
+a reply from the security inbox reached the original sender. The owner also confirms
+working Gmail notifications, enabled Google 2-Step Verification and review of GitHub
+App permissions. These are **owner attestations, not independent verification**:
+the development assistant did not inspect the inbox or account security settings.
+Mailbox delegates/forwarding and unauthorized-user access tests have not been reported
+complete; two-step verification alone does not establish those properties. Full
+reporting-process assurance remains limited. Do not include real secrets or sensitive
 personal data; start with a minimal redacted text report. Ordinary email is not
 end-to-end encrypted.
 
@@ -37,8 +39,8 @@ A private source issue tracker is not an external confidential reporting channel
 outsiders cannot normally use it, and source collaborators may see its issues.
 The
 [owner setup and verification procedure](docs/security-reporting-setup.md) explains
-the remaining notification/access-control checks and future native-reporting steps.
-The contact is approved for this PRIVATE preparation branch; it does not authorize
+the owner-confirmed checks, remaining access-control checks and future native-reporting steps.
+The contact is approved for this PRIVATE source candidate; it does not authorize
 a public release or imply a completed security audit.
 
 ## Security boundaries in scope
@@ -69,7 +71,8 @@ only reviewed, trusted source/configuration without privileged credentials; use
 manual-only CI and exclude binary, compiled-dashboard, runtime and model distributions.
 The workflow requires a reviewed matching main SHA and explicit trust acknowledgement
 before checkout. These restrictions do not fix the upstream vulnerability. Hosted
-CI enforcement and account-wide app access are not fully validated. See the
+CI enforcement is not validated. GitHub App permission review is owner-confirmed,
+without an independent app-access audit. See the
 [dependency assessment](docs/dependency-advisory.md) and
 [release gates](docs/release-readiness.md).
 
