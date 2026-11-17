@@ -9,12 +9,22 @@ candidate or authorize publication. There is no supported stable/production rele
 response-time commitment or promised support lifetime. Independent adversarial
 security auditing is incomplete. No security tool guarantees protection.
 
-## Confidential reporting: NOT VERIFIED — publication blocker
+## Confidential vulnerability-reporting contact
 
-**There is currently no verified confidential reporting destination. Do not submit
-sensitive vulnerability details to GitHub issues, discussions, pull requests or
-an assumed personal email address. Do not disclose vulnerability details publicly
-before coordinating a private reporting channel and disclosure plan.**
+Send private vulnerability reports to
+**[zyntrava.security@gmail.com](mailto:zyntrava.security@gmail.com)**.
+Do not disclose vulnerability details publicly in issues, discussions or pull
+requests before coordinating a private reporting and disclosure plan.
+
+**Verification status: owner-verified email receipt and reply only.** The owner
+reports that a test email from another account was received by this inbox and that
+a reply from the security inbox reached the original sender. This statement records
+the owner's verification; the development assistant did not inspect inbox messages
+or independently reproduce those tests. **Notification delivery and access-control
+testing have not been completed.** Full reporting-process verification remains
+incomplete and is a publication blocker. Do not include real secrets or sensitive
+personal data; start with a minimal redacted text report. Ordinary email is not
+end-to-end encrypted.
 
 On 17 November 2026, authenticated owner/admin checks of the PRIVATE staging
 repository returned HTTP 404 for both the native private-vulnerability-reporting
@@ -23,18 +33,13 @@ successfully enabled or verified. Both project repositories remain PRIVATE.
 GitHub's native feature is documented for public repositories; this project must
 not become public simply to obtain it.
 
-The creator has confirmed that no dedicated, verified security-reporting inbox
-exists yet. No address is advertised, no test email has been sent, and no external
-report submission/receipt/reply or notification delivery has been verified.
 A private source issue tracker is not an external confidential reporting channel:
 outsiders cannot normally use it, and source collaborators may see its issues.
-
-Until a channel is verified, retain any findings privately. Reviewers who already
-have an established, trusted relationship with the creator may use that relationship
-to agree a channel first; it is not an advertised general intake mechanism. The
+The
 [owner setup and verification procedure](docs/security-reporting-setup.md) explains
-the remaining email setup and future native-reporting steps. It contains no live
-reporting address. A verified destination must be added here before public release.
+the remaining notification/access-control checks and future native-reporting steps.
+The contact is approved for this PRIVATE preparation branch; it does not authorize
+a public release or imply a completed security audit.
 
 ## Security boundaries in scope
 
@@ -68,7 +73,7 @@ CI enforcement and account-wide app access are not fully validated. See the
 [dependency assessment](docs/dependency-advisory.md) and
 [release gates](docs/release-readiness.md).
 
-## What to include once a private channel is verified
+## What to include in a private report
 
 Use the [vulnerability report template](reviewer/VULNERABILITY-REPORT.md). Include:
 
@@ -92,7 +97,7 @@ test third-party services or real financial accounts, perform real payments,
 disable host protections, reset classified sessions or automatically retry uncertain
 side effects. Never expand testing scope without fresh authorization.
 
-Once private intake works, the intended process is to acknowledge privately,
+The intended coordination process is to acknowledge privately,
 reproduce and assess impact, agree remediation/disclosure with the reporter,
 add regression tests, share a proposed fix privately and credit the reporter only
 with consent. No response deadline, bounty, legal safe harbor or guaranteed fix

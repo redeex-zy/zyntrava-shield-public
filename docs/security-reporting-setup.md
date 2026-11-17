@@ -1,9 +1,16 @@
 # Confidential reporting setup and verification
 
-**Status: NOT CONFIGURED / NOT VERIFIED. No reporting address is published.**
-This is an actionable owner procedure, not a claim that a channel works.
-The creator confirms there is no dedicated verified inbox yet. No mailbox, new
-repository, collaborator, email, test report or advisory has been created here.
+**Contact: [zyntrava.security@gmail.com](mailto:zyntrava.security@gmail.com).**
+**Status: PARTIALLY VERIFIED — email receipt and reply verified by the owner.**
+The owner reports successful receipt of a test email from another account and
+successful delivery of a reply from the security inbox to that sender. No inbox
+messages or mail headers were inspected by the development assistant; this is
+owner-attested verification, not an independently reproduced test.
+**Notification delivery and access-control testing have not been completed.**
+Full reporting-process verification and public publication remain NO-GO until the
+remaining checks and separate release approvals are complete. Version **0.9.1a1**
+remains experimental. This update sends no email and creates no account, repository,
+collaborator or advisory.
 
 ## Observed private-staging configuration — 17 November 2026
 
@@ -27,18 +34,16 @@ Do not change visibility, refresh token scopes, purchase services or create anot
 repository to bypass the current restrictions. A private source issue tracker
 cannot accept normal external reports and is not case-confidential among its readers.
 
-## Route now: owner-configured dedicated email
+## Route now: owner-designated dedicated email
 
 These steps require the creator's mailbox/provider access and manual action. No
 password, recovery code, API token or private key should be shared with an assistant,
 stored in Git, or pasted into a report. This task sends no email from any account.
 
-1. **Select the destination.** Use an owner-controlled provider/account already
-   available, or separately arrange a dedicated mailbox/alias. No domain purchase,
-   subscription or account creation is performed by this task; the creator chooses
-   the actual destination manually.
-   Keep the actual destination private until it passes the tests below. Do not derive
-   an address from the project name, GitHub profile or guessed domain.
+1. **Use the designated contact.** The creator supplies and authorizes
+   `zyntrava.security@gmail.com` for private vulnerability reports. Receipt and reply
+   were verified by the owner as described above. No address was inferred from a
+   profile/domain, and no personal sender address or mail header is published.
 2. **Confirm control and access.** Sign in directly to the provider, verify the
    destination exists and can receive external mail, and verify ownership/control
    of its alias and backing mailbox. Review delegates, recovery methods, forwarding
@@ -60,38 +65,46 @@ stored in Git, or pasted into a report. This task sends no email from any accoun
    administrators are trusted parties. Start with redacted text; agree a separately
    verified protected exchange before highly sensitive material. Do not advertise
    encryption or an OpenPGP key that has not been configured and verified.
-6. **Run the harmless test below.** The creator uses an already-controlled second
-   mailbox as the external sender, or separately obtains a consenting tester.
-   Do not contact external researchers, create accounts or send mail automatically.
-7. **Record evidence privately.** Keep actual addresses, mail headers, receipts,
-   identities and access-control details outside Git. Record only sanitized result
+6. **Complete the remaining harmless checks below.** Preserve the owner's successful
+   receipt/reply results; do not relabel them as assistant-executed or independently
+   audited. Notification delivery, effective access and forwarding/delegates/apps
+   still require verification. Do not contact external researchers, create accounts
+   or send mail automatically.
+7. **Record evidence privately.** Apart from the approved security contact, keep
+   sender addresses, mail headers, receipts, identities and access-control details
+   outside Git. Record only sanitized result
    summaries in release documents. A test marker is correlation text, not a credential.
-8. **Publish instructions only after verification and approval.** In a new reviewed
-   documentation commit, replace SECURITY.md's inactive-channel paragraph with the
-   exact verified destination, allowed report format and reply expectations. Review
-   and reseal any changed release candidate. Do not modify the original sealed ZIP.
+8. **Keep status precise.** SECURITY.md lists the owner-designated contact and
+   distinguishes receipt/reply verification from incomplete notification/access
+   testing. Update that status only after additional evidence exists. Public
+   publication requires separate approval and a reviewed/resealed changed source
+   candidate. Do not modify the original sealed ZIP or merge this branch into main.
 
-### Email configuration worksheet — values remain private and unset
+### Email configuration and verification worksheet
 
 | Field | Required owner decision/evidence |
 | --- | --- |
-| Dedicated destination | NOT CONFIGURED; no address supplied or invented |
-| Owner-controlled provider and mailbox/alias | Verify directly in the provider; no account credentials in Git |
-| Authorized readers/delegates | Inventory actual access and integrations; least privilege |
-| Forwarding/ticketing rules | Confirm no public/unapproved recipients or automatic exports |
-| Authentication/recovery | Owner verifies strong account security; do not record recovery secrets |
-| Mail notifications and spam handling | Test exact inbound marker, reply and notifications |
-| Retention/incident handling | Owner chooses deletion/retention and backup expectations |
-| Public contact text | Remains absent until receipt/reply/access tests pass |
+| Dedicated destination | `zyntrava.security@gmail.com`, explicitly supplied and authorized by the owner |
+| Inbound email receipt | VERIFIED BY OWNER: test from another account was received |
+| Reply delivery | VERIFIED BY OWNER: reply reached the original sender |
+| Notification delivery | NOT VERIFIED; no completed notification test claimed |
+| Access controls/readers/delegates | NOT VERIFIED; review actual readers and integrations |
+| Forwarding/ticketing rules | NOT VERIFIED; confirm no public/unapproved exports |
+| Authentication/recovery | Owner review still required; no credentials or recovery secrets in Git |
+| Spam handling/retention | Owner review still required; no test result claimed |
+| Documentation approval | Contact approved on PRIVATE preparation branch; no public-release authorization |
 
-No SMTP endpoint, mail credentials, DNS record or fabricated destination is provided.
-Notification receipt and destination ownership cannot be verified through the current
-GitHub token or by a document alone.
+No SMTP credentials, private mail headers or fabricated destination are provided.
+The current GitHub token cannot inspect the Gmail inbox. The owner's receipt/reply
+statement is the evidence recorded here; it does not verify notification settings,
+access controls, delegates, forwarding, MFA or retention.
 
-## Harmless end-to-end verification — not performed yet
+## Harmless verification — owner-verified receipt/reply; remaining checks incomplete
 
-Use synthetic text only. Do not use a real vulnerability as the test. The owner
-records actual UTC times and sanitized evidence in a private test record.
+Use synthetic text only. Do not use a real vulnerability as the test. Preserve the
+owner-reported successful receipt and reply; no exact test time, sender identity,
+marker or private receipt artifact was supplied to the assistant. Do not invent
+those details. Record additional evidence privately as the remaining tests run.
 
 1. Agree the destination, intended participants and a unique marker. Suggested
    subject: **Harmless confidential-channel verification — not a vulnerability**.
@@ -112,23 +125,26 @@ records actual UTC times and sanitized evidence in a private test record.
    finite access tests do not prove arbitrary future confidentiality.
 7. Close/archive the harmless test privately according to the owner's retention
    decision. Closing or deletion does not erase provider backups or delivered copies.
-8. Mark the channel VERIFIED only after submission, receipt, reply, required
+8. Mark the full process VERIFIED only after submission, receipt, reply, required
    notifications, access controls and correct SECURITY.md instructions pass.
-   Any failed or unavailable step remains NOT VERIFIED and blocks public intake.
+   The owner-verified receipt/reply results remain valid as owner attestations;
+   untested notification/access steps remain NOT VERIFIED and block full publication sign-off.
 
-Minimum private test record (do not commit real contact details or report URLs):
+Private test record (do not commit sender addresses, inbox artifacts or report URLs;
+the designated security contact above is explicitly owner-approved):
 
 ```json
 {
-  "channel_status": "NOT VERIFIED",
-  "submission": "NOT RUN",
-  "owner_receipt": "NOT RUN",
-  "private_reply": "NOT RUN",
-  "notification_delivery": "NOT RUN",
-  "unauthenticated_access_denied": "NOT RUN",
-  "unrelated_account_access_denied": "NOT RUN",
-  "delegates_apps_forwarding_review": "NOT RUN",
-  "security_policy_matches_verified_destination": false,
+  "channel_status": "PARTIALLY VERIFIED",
+  "submission": "OWNER-REPORTED TEST FROM ANOTHER ACCOUNT",
+  "owner_receipt": "VERIFIED BY OWNER",
+  "private_reply": "VERIFIED BY OWNER: REACHED ORIGINAL SENDER",
+  "evidence_basis": "Owner statement; no inbox artifacts inspected by assistant",
+  "notification_delivery": "NOT VERIFIED",
+  "unauthenticated_access_denied": "NOT TESTED",
+  "unrelated_account_access_denied": "NOT TESTED",
+  "delegates_apps_forwarding_review": "NOT VERIFIED",
+  "security_policy_matches_owner_designated_contact": true,
   "sanitized_evidence_ids": []
 }
 ```
@@ -137,8 +153,9 @@ Minimum private test record (do not commit real contact details or report URLs):
 
 Maintain the verified email route during any migration. This procedure does not
 authorize changing repository visibility. Public publication must first pass its
-separate owner approval and other release gates; a working email route resolves
-the pre-publication reporting requirement without making staging public for a test.
+separate owner approval and other release gates. Completing the remaining email
+verification can satisfy the reporting gate without making staging public for a test;
+receipt and reply alone do not complete the notification/access-control requirements.
 
 1. After separately approved publication, confirm the intended repository's actual
    owner/name and PUBLIC visibility. The original research repository stays PRIVATE.
@@ -180,10 +197,11 @@ Official references:
 [maintainer replies and closure](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/fix-reported-vulnerabilities/manage-vulnerability-reports),
 [enable API](https://docs.github.com/en/rest/repos/repos#enable-private-vulnerability-reporting-for-a-repository).
 
-## Not authorized or configured here
+## Actions outside this documentation update
 
 No new reporting repository or outside collaborator is authorized. Do not substitute
 a general private issue tracker for outsider intake. No mailbox/provider account,
 mail transmission, scope refresh, public advisory, release, deployment, Pages site
-or visibility change has occurred. The policy and source remain experimental;
+or visibility change was performed by the assistant. The owner separately reports
+the successful email receipt/reply test above. The policy and source remain experimental;
 account-wide app access and independent security auditing remain unresolved.
