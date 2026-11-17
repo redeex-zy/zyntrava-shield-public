@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Zyntrava</title>
+  <rect width="64" height="64" rx="14" fill="#080F1D"/>
+  <path d="m32 7 21 10v21c0 10-8 17-21 23C19 55 11 48 11 38V17L32 7Z" fill="#111C2F" stroke="#75ADFF" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M22 23h20L22 42h20" stroke="#EDF3FF" stroke-width="4.5" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M48 37v11" stroke="#111C2F" stroke-width="7"/>
+  <rect x="45" y="39" width="6" height="6" rx="1" fill="#B4A0FF"/>
+</svg>

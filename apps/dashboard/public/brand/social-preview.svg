@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Zyntrava Shield — Intelligence Deserves Protection.</title>
+  <desc id="desc">Open-source AI security research by Mohamed Reda Mejhed, Morocco. A diagram places a policy boundary between a proposed agent action and an authorized tool.</desc>
+  <rect width="1200" height="630" fill="#080F1D"/>
+  <path d="M0 539h1200M746 0v630" stroke="#22324B"/>
+  <g transform="translate(54 42) scale(.56)">
+    <path d="M64 8 108 29v43c0 21-17 35-44 48C37 107 20 93 20 72V29L64 8Z" fill="#111C2F" stroke="#75ADFF" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M42 42h44L44 83h42" stroke="#EDF3FF" stroke-width="9" stroke-linecap="square" stroke-linejoin="round"/>
+    <rect x="91" y="77" width="12" height="12" rx="2" fill="#B4A0FF"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="137" y="88" fill="#EDF3FF" font-size="29" font-weight="650" letter-spacing="4">ZYNTRAVA</text>
+    <text x="64" y="202" fill="#75ADFF" font-size="19" font-weight="600" letter-spacing="2">ZYNTRAVA SHIELD</text>
+    <text x="64" y="275" fill="#EDF3FF" font-size="52" font-weight="650">Intelligence</text>
+    <text x="64" y="339" fill="#EDF3FF" font-size="52" font-weight="650">Deserves Protection.</text>
+    <text x="66" y="412" fill="#A5B4CB" font-size="25">Open-source AI security research.</text>
+    <text x="66" y="455" fill="#A5B4CB" font-size="21">Explicit permissions for agent tool actions.</text>
+    <text x="64" y="587" fill="#A5B4CB" font-size="19">Created by Mohamed Reda Mejhed · Morocco</text>
+    <rect x="815" y="133" width="314" height="83" rx="8" fill="#111C2F" stroke="#344763"/>
+    <text x="972" y="183" text-anchor="middle" fill="#EDF3FF" font-size="23">Proposed agent action</text>
+    <path d="M972 216v50m-7-7 7 7 7-7" stroke="#75ADFF" stroke-width="2"/>
+    <rect x="815" y="277" width="314" height="83" rx="8" fill="#111C2F" stroke="#B4A0FF" stroke-width="2"/>
+    <text x="972" y="327" text-anchor="middle" fill="#EDF3FF" font-size="23">Policy enforcement</text>
+    <path d="M972 360v50m-7-7 7 7 7-7" stroke="#75ADFF" stroke-width="2"/>
+    <rect x="815" y="421" width="314" height="83" rx="8" fill="#111C2F" stroke="#344763"/>
+    <text x="972" y="471" text-anchor="middle" fill="#EDF3FF" font-size="23">Authorized tool</text>
+  </g>
+</svg>

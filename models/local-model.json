@@ -1,0 +1,15 @@
+{
+  "model_id": "zyntrava-qwen2.5-1.5b",
+  "repository": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+  "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+  "filename": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+  "sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+  "size_bytes": 1117320736,
+  "license": "Apache-2.0",
+  "runtime": "llama.cpp b11669 (v0.7.0 binary release)",
+  "runtime_url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/llama-b11669-bin-win-vulkan-x64.zip",
+  "runtime_sha256": "2c07574e7bde71321cb785282b20cc821e951132149eeceeea32ddebdbf0598e",
+  "context_tokens": 4096,
+  "gpu_layers": 99,
+  "backend": "Vulkan"
+}

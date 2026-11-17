@@ -1,0 +1,10 @@
+title = "Zyntrava selected source"
+[extend]
+useDefault = true
+[[allowlists]]
+description = "Local runtime and dependency directories are not release source; separate unfiltered allowlist scans are required"
+paths = ['''(^|[\\/])(?:\.venv|\.tools|\.git|\.state|artifacts|runs|dist|node_modules|\.next|out|test-results|playwright-report)(?:[\\/]|$)''']
+[[allowlists]]
+description = "Explicit nonfunctional synthetic test marker, not an actual service credential"
+regexTarget = "secret"
+regexes = ['''^ZYN_TEST_SECRET_[A-Za-z0-9_-]+$''']

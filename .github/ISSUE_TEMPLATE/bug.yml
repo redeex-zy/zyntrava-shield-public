@@ -1,0 +1,15 @@
+name: Bug report
+description: Report a reproducible functional bug. Do not disclose security vulnerabilities here.
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction with synthetic data
+      description: Include version, OS, commands, expected and actual results. Remove credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted evidence
+      description: Include an experiment identifier or sanitized audit event, if relevant.

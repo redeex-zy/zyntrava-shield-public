@@ -1,0 +1,27 @@
+name: Installation feedback
+description: Synthetic local setup problems only. Do not disclose security vulnerabilities here.
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: OS, Python version and source revision
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Exact failing command and redacted error
+      description: Remove user paths, tokens and environment dumps. Say whether this was a fresh venv.
+    validations:
+      required: true
+  - type: textarea
+    id: expectation
+    attributes:
+      label: Expected next step and documentation that was unclear
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy and testing scope
+      options:
+        - label: I used dummy data and owned local services; no credentials or personal data are attached.
+          required: true

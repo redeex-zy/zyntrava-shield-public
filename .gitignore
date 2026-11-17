@@ -1,0 +1,42 @@
+.venv/
+.bootstrap/
+.tools/
+.wheel-smoke/
+.repro-smoke/
+artifacts/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.state/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.gguf
+node_modules/
+.next/
+dist/
+test-results/
+playwright-report/
+apps/dashboard/out/
+apps/website/out/
+*.tsbuildinfo
+# Local integration runtime state is never source-distribution content.
+/benchmarks/agent09-results/**/workspace/
+/benchmarks/agent09-results/**/audit.sqlite3*
+/benchmarks/pilot091-results/**/workspace/
+/benchmarks/pilot091-results/**/*.sqlite3*
+# Disposable reviewer/example outputs may contain raw synthetic transcripts/state.
+/runs/
+*.sqlite3
+*.sqlite3-*
+
+# Generated browser evidence is private until individually reviewed.
+/docs/screenshots/

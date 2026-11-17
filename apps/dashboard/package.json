@@ -1,0 +1,27 @@
+{
+  "name": "zyntrava-dashboard",
+  "version": "0.8.0-alpha.1",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test lib/api.test.ts lib/comparison.test.ts lib/jobs.test.ts",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2"
+  },
+  "engines": { "node": ">=24.21.0 <25" }
+}

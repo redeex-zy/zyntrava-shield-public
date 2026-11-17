@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="548" height="128" viewBox="0 0 548 128" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">ZYNTRAVA</title>
+  <desc id="desc">Zyntrava wordmark with a routed Z inside an angular protective boundary.</desc>
+  <g transform="translate(0 4) scale(.9375)">
+    <path d="M64 8 108 29v43c0 21-17 35-44 48C37 107 20 93 20 72V29L64 8Z" fill="#111C2F" stroke="#75ADFF" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M42 42h44L44 83h42" stroke="#EDF3FF" stroke-width="9" stroke-linecap="square" stroke-linejoin="round"/>
+    <path d="M97 72v22" stroke="#111C2F" stroke-width="12"/>
+    <rect x="91" y="77" width="12" height="12" rx="2" fill="#B4A0FF"/>
+  </g>
+  <text x="140" y="80" fill="#EDF3FF" font-family="Segoe UI, Arial, sans-serif" font-size="47" font-weight="650" letter-spacing="5">ZYNTRAVA</text>
+</svg>

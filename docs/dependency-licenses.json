@@ -1,0 +1,2321 @@
+{
+  "schema": "zyntrava.preview.license-inventory.v1",
+  "source": "Installed Python distribution metadata and committed npm lockfiles",
+  "python": [
+    {
+      "name": "CacheControl",
+      "version": "0.14.4",
+      "expression": "Apache-2.0",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "cachecontrol-0.14.4.dist-info/licenses/LICENSE.txt",
+          "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "MIT",
+      "license_files": [
+        {
+          "path": "pyyaml-6.0.3.dist-info/licenses/LICENSE",
+          "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "expression": "BSD-2-Clause",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "pygments-2.21.0.dist-info/licenses/AUTHORS",
+          "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f"
+        },
+        {
+          "path": "pygments-2.21.0.dist-info/licenses/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "annotated_doc-0.0.5.dist-info/licenses/LICENSE",
+          "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "expression": "MIT",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "annotated_types-0.8.0.dist-info/licenses/LICENSE",
+          "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "anyio-4.15.1.dist-info/licenses/LICENSE",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "ast_serialize",
+      "version": "0.13.1",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "ast_serialize-0.13.1.dist-info/licenses/LICENSE",
+          "sha256": "91e1749165651f2ad405f1533a921fc8d5cb0de2fd88a4b82090a8b571b5598d"
+        },
+        {
+          "path": "ast_serialize-0.13.1.dist-info/licenses/crates/LICENSE",
+          "sha256": "f798046f335b4c84dc851224aeeb8a96b6a1eb70f02f058e860bb00d9d7551cc"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "bandit",
+      "version": "1.9.4",
+      "expression": null,
+      "classifiers": [],
+      "legacy_label": "Apache-2.0",
+      "license_files": [
+        {
+          "path": "bandit-1.9.4.dist-info/licenses/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "boolean.py",
+      "version": "5.0",
+      "expression": null,
+      "classifiers": [],
+      "legacy_label": "BSD-2-Clause",
+      "license_files": [
+        {
+          "path": "boolean_py-5.0.dist-info/licenses/CHANGELOG.rst",
+          "sha256": "668591601989e0845d728db39fdcbf005323965b1a0db7580988da78e163c519"
+        },
+        {
+          "path": "boolean_py-5.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "5ea0cdf8cfc824b446cccf597ff6518c3607a659e9804bc75f1261f9c6ac4ada"
+        },
+        {
+          "path": "boolean_py-5.0.dist-info/licenses/README.rst",
+          "sha256": "c159099ed4ae91ff7e1ba43e52f7bef5fab963deeae47e4d6a2ec6fd73ea4cbb"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.23",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+      ],
+      "legacy_label": "MPL-2.0",
+      "license_files": [
+        {
+          "path": "certifi-2026.10.23.dist-info/licenses/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "expression": null,
+      "classifiers": [],
+      "legacy_label": "MIT",
+      "license_files": [
+        {
+          "path": "charset_normalizer-3.5.2.dist-info/licenses/LICENSE",
+          "sha256": "18577485d3704f1a479ded8e573c0976cfed315fd2fd17983fa988da4c2f70d1"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "expression": "BSD-3-Clause",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "click-8.5.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "colorama-0.4.6.dist-info/licenses/LICENSE.txt",
+          "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "cyclonedx-python-lib",
+      "version": "11.12.0",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "legacy_label": "Apache-2.0",
+      "license_files": [
+        {
+          "path": "cyclonedx/contrib/license/__init__.py",
+          "sha256": "19e68093a5935136ee9d558feb061cee28eea67fd996f6b095716a1c91071d7a"
+        },
+        {
+          "path": "cyclonedx/contrib/license/exceptions.py",
+          "sha256": "d7efceb56a562e0e9597afd5f1421b20b549673c6c0b449305830f38e8936215"
+        },
+        {
+          "path": "cyclonedx/contrib/license/factories.py",
+          "sha256": "0b003fe978f22e937d071bc7122f89c8ad8766cd06be4e8bcb7580aec6740f3a"
+        },
+        {
+          "path": "cyclonedx/factory/license.py",
+          "sha256": "021381eed6e355e7d325cb3e22dfd5ab1e3d244839467fada27ab3b3f6f7beb6"
+        },
+        {
+          "path": "cyclonedx/model/license.py",
+          "sha256": "245ab06d6246854878c3a00d7183353c53634568d01af27791ffa9f8b122f34a"
+        },
+        {
+          "path": "cyclonedx_python_lib-11.12.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "cyclonedx_python_lib-11.12.0.dist-info/licenses/NOTICE",
+          "sha256": "1c3bd67b96888a4ca25f3a94683d929b3f66d7e4cdfe6c04d24f16501a9375c3"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: Python Software Foundation License"
+      ],
+      "legacy_label": "PSFL",
+      "license_files": [
+        {
+          "path": "defusedxml-0.7.1.dist-info/LICENSE",
+          "sha256": "b80ce9da8c42a1f91079627fbbe2bf27210ae108a0ffe5f077d5b08e076c24c8"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "fastapi",
+      "version": "0.162.0",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "fastapi-0.162.0.dist-info/licenses/LICENSE",
+          "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "filelock",
+      "version": "4.2.4",
+      "expression": "MIT",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "filelock-4.2.4.dist-info/licenses/LICENSE",
+          "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "genai-prices",
+      "version": "0.1.13",
+      "expression": "MIT",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "genai_prices-0.1.13.dist-info/licenses/LICENSE",
+          "sha256": "ab47bf0bbd619cd73e16fd7873c7e0798e7aa62bcc9ae2fc79cbcb9799e609f6"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "griffelib",
+      "version": "2.4.1",
+      "expression": "ISC",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "griffelib-2.4.1.dist-info/licenses/LICENSE",
+          "sha256": "d746d07b994c49910d0212f098ec5981658f95cadb82d725ad52d72afb99ad88"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "MIT",
+      "license_files": [
+        {
+          "path": "h11-0.16.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "expression": "BSD-3-Clause",
+      "classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+          "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.16.0",
+      "expression": "BSD-3-Clause",
+      "classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "httpcore2-2.16.0.dist-info/licenses/LICENSE.md",
+          "sha256": "c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "legacy_label": "BSD-3-Clause",
+      "license_files": [
+        {
+          "path": "httpx-0.28.1.dist-info/licenses/LICENSE.md",
+          "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "httpx2",
+      "version": "2.16.0",
+      "expression": "BSD-3-Clause",
+      "classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "httpx2-2.16.0.dist-info/licenses/LICENSE.md",
+          "sha256": "7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "expression": "BSD-3-Clause",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "idna-3.20.dist-info/licenses/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.1",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "iniconfig-2.3.1.dist-info/licenses/LICENSE",
+          "sha256": "3409fa91f7ace557894632676656e32264fe5ef7581535725dc9a23774551bd4"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "jiter",
+      "version": "0.18.0",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "jiter-0.18.0.dist-info/licenses/LICENSE",
+          "sha256": "e65c152aa65deaaa52019855bf1bbce4a0d592a048cb523b6ca691965741241e"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "librt",
+      "version": "0.16.0",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "librt-0.16.0.dist-info/licenses/LICENSE",
+          "sha256": "81b7ac7e5dc9410dd4aa4c8f8c5884b43cb821137904dc247b381132389b6aa8"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "license-expression",
+      "version": "30.4.4",
+      "expression": null,
+      "classifiers": [],
+      "legacy_label": "Apache-2.0",
+      "license_files": [
+        {
+          "path": "license_expression-30.4.4.dist-info/INSTALLER",
+          "sha256": "e6184ce10e266134fdcfa401e8f1a95005bcd4f18d16b62b757323e2833fe9a9"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/METADATA",
+          "sha256": "1f8fc95adb7c2fead6d6b52cc2da09d4177b24bfac067f7a4dbdc666e72495fb"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/RECORD",
+          "sha256": "30e02470d67f4b231b63a07ed915d8f69ed6ee8b32656c97f818c19a050ca39f"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/REQUESTED",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/WHEEL",
+          "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/licenses/AUTHORS.rst",
+          "sha256": "d281b77e2e6dd089de830c623cf1c31e029d8232d0bd762005bf69bd5417f8e9"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/licenses/CHANGELOG.rst",
+          "sha256": "5c150f030597fda082ef81788fa6981d9993ed0a85de5f3d69ab3f316b405515"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/licenses/CODE_OF_CONDUCT.rst",
+          "sha256": "c570d3169618dd8ec9a31ad60038a189e52f84697025cfe8c6c6e62c9681bc4e"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/licenses/NOTICE",
+          "sha256": "ef97db07e32f6e5d34363461acf5acc7d72db924533bce3d9f3b87046313363c"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/licenses/README.rst",
+          "sha256": "0b11cadafb5e34444e3bea9d3af608f89354a058bb46e91158f7280376c03bfb"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/licenses/apache-2.0.LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "license_expression-30.4.4.dist-info/top_level.txt",
+          "sha256": "7bc49a7d5309e9eea715dfd3c41185428564f010b189ec29c9742d0c6356bdb1"
+        },
+        {
+          "path": "license_expression/__init__.py",
+          "sha256": "78c6f58164867161cc1de6e68dd8f7a634978f3e0d7fff662f33c40059421676"
+        },
+        {
+          "path": "license_expression/_pyahocorasick.ABOUT",
+          "sha256": "75d79cccf1fc302cb4a99bd32aac8bd4fc80926b15d31f0ba994d16cdf844032"
+        },
+        {
+          "path": "license_expression/_pyahocorasick.py",
+          "sha256": "16e261aa9bd0f8807ad1a070093e91ab97a05cc1a8eacc7cac054c0e0a93dd83"
+        },
+        {
+          "path": "license_expression/data/cc-by-4.0.LICENSE",
+          "sha256": "2a82ac9bbc3e3ee066908381e8d373896db5a6025d083fbd59692fe9ccfb9111"
+        },
+        {
+          "path": "license_expression/data/license_key_index.json.ABOUT",
+          "sha256": "fb5ce1f2dbd2bedc01fad9507be71ca19ec37b4d6f8dfb9516fbfefee410d85d"
+        },
+        {
+          "path": "license_expression/data/scancode-licensedb-index.json",
+          "sha256": "d7594273825a68b2d5676d76d336c560210072f07a77edb193ad608694067596"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "logfire-api",
+      "version": "5.4.0",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [],
+      "needs_manual_review": false
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "markdown_it_py-4.2.0.dist-info/licenses/LICENSE",
+          "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484"
+        },
+        {
+          "path": "markdown_it_py-4.2.0.dist-info/licenses/LICENSE.markdown-it",
+          "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "mdurl-0.1.2.dist-info/LICENSE",
+          "sha256": "7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "msgpack",
+      "version": "1.2.4",
+      "expression": "Apache-2.0",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "msgpack-1.2.4.dist-info/licenses/COPYING",
+          "sha256": "4fbdff42eba4593c16f7a7ea7078883b2b734870a1e2b636284ce2dce62bf4f7"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "mypy",
+      "version": "2.4.0",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "mypy-2.4.0.dist-info/licenses/LICENSE",
+          "sha256": "1cdee80ea9363fbe69582df40fa64e1853d7647fb4978c2b376f5854d88142be"
+        },
+        {
+          "path": "mypy-2.4.0.dist-info/licenses/mypy/typeshed/LICENSE",
+          "sha256": "13c71e0962836d8850762bda0f6234ff213034871fa66b6c42962549d73517a4"
+        },
+        {
+          "path": "mypy/typeshed/LICENSE",
+          "sha256": "13c71e0962836d8850762bda0f6234ff213034871fa66b6c42962549d73517a4"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "mypy_extensions",
+      "version": "1.1.0",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "mypy_extensions-1.1.0.dist-info/licenses/LICENSE",
+          "sha256": "a50450da1d53cd777b80ced77c58ff96abe0ccd879706bd142c3ec20e245f0b4"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "openai",
+      "version": "3.40.0",
+      "expression": "Apache-2.0",
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "openai-3.40.0.dist-info/licenses/LICENSE",
+          "sha256": "636eb7d79da9bb6d515a4b3fd417aa26679eb3cf16396ddab4bc55fa74e616e4"
+        },
+        {
+          "path": "openai/_vendor/httpx_aiohttp/LICENSE",
+          "sha256": "154759c1e9eb58e42643ee43ec59d556def4d1d702d911a484c469e02f85dd5d"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.2",
+      "expression": "Apache-2.0",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "opentelemetry_api-1.45.2.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "packageurl-python",
+      "version": "0.17.6",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "MIT",
+      "license_files": [],
+      "needs_manual_review": false
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "expression": "Apache-2.0 OR BSD-2-Clause",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "packaging-26.3.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "path": "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "packaging-26.3.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "path": "packaging/licenses/__init__.py",
+          "sha256": "590d12eee73ddbec53b4e9ee5bfc64d9cb3aacb4940e8ebcba260757ce56740b"
+        },
+        {
+          "path": "packaging/licenses/_spdx.py",
+          "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pathspec",
+      "version": "1.1.1",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "pathspec-1.1.1.dist-info/licenses/LICENSE",
+          "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pip",
+      "version": "26.2.2",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "pip-26.2.2.dist-info/licenses/AUTHORS.txt",
+          "sha256": "4eb1fb1705e2def898e81bcba19c3aac80620d27ba3569d6a6df7b4629d1b5c2"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/LICENSE.txt",
+          "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+          "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+          "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+          "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+          "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+          "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+          "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/tomli/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+        },
+        {
+          "path": "pip-26.2.2.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+        },
+        {
+          "path": "pip/_vendor/cachecontrol/LICENSE.txt",
+          "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+        },
+        {
+          "path": "pip/_vendor/certifi/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+        },
+        {
+          "path": "pip/_vendor/distlib/LICENSE.txt",
+          "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d"
+        },
+        {
+          "path": "pip/_vendor/distro/LICENSE",
+          "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+        },
+        {
+          "path": "pip/_vendor/idna/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        },
+        {
+          "path": "pip/_vendor/msgpack/COPYING",
+          "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+        },
+        {
+          "path": "pip/_vendor/packaging/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "path": "pip/_vendor/packaging/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "pip/_vendor/packaging/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "path": "pip/_vendor/packaging/licenses/__init__.py",
+          "sha256": "fc9c745d1883ff9f296a5b169f22eb2ee879f59a4608f20f5cb29d668f4e26f4"
+        },
+        {
+          "path": "pip/_vendor/packaging/licenses/_spdx.py",
+          "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314"
+        },
+        {
+          "path": "pip/_vendor/pkg_resources/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        },
+        {
+          "path": "pip/_vendor/platformdirs/LICENSE",
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+        },
+        {
+          "path": "pip/_vendor/pygments/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+        },
+        {
+          "path": "pip/_vendor/pyproject_hooks/LICENSE",
+          "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+        },
+        {
+          "path": "pip/_vendor/requests/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+        },
+        {
+          "path": "pip/_vendor/resolvelib/LICENSE",
+          "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+        },
+        {
+          "path": "pip/_vendor/rich/LICENSE",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+        },
+        {
+          "path": "pip/_vendor/tomli/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        },
+        {
+          "path": "pip/_vendor/tomli_w/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        },
+        {
+          "path": "pip/_vendor/truststore/LICENSE",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+        },
+        {
+          "path": "pip/_vendor/urllib3/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pip-requirements-parser",
+      "version": "32.0.1",
+      "expression": null,
+      "classifiers": [],
+      "legacy_label": "MIT",
+      "license_files": [],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pip_api",
+      "version": "0.0.35",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "legacy_label": "Long license text in METADATA",
+      "license_files": [
+        {
+          "path": "pip_api-0.0.35.dist-info/licenses/LICENSE",
+          "sha256": "14ed54990120efea26042269885df36e1b53db858bf04b40c8cfc8c5e12f6fb1"
+        },
+        {
+          "path": "pip_api/_vendor/packaging/licenses/__init__.py",
+          "sha256": "fc9c745d1883ff9f296a5b169f22eb2ee879f59a4608f20f5cb29d668f4e26f4"
+        },
+        {
+          "path": "pip_api/_vendor/packaging/licenses/_spdx.py",
+          "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pip_audit",
+      "version": "2.10.1",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "pip_audit-2.10.1.dist-info/licenses/LICENSE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.13.6",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "platformdirs-4.13.6.dist-info/licenses/LICENSE",
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pluggy",
+      "version": "1.7.0",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "MIT",
+      "license_files": [
+        {
+          "path": "pluggy-1.7.0.dist-info/licenses/LICENSE",
+          "sha256": "d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "expression": null,
+      "classifiers": [],
+      "legacy_label": "BSD-3-Clause",
+      "license_files": [
+        {
+          "path": "psutil-7.2.2.dist-info/LICENSE",
+          "sha256": "c7adc4d5d1337a548b967421f1fbe258b93033a0417708fd6f4e38f8ecbceb80"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "py-serializable",
+      "version": "2.1.0",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "legacy_label": "Apache-2.0",
+      "license_files": [
+        {
+          "path": "py_serializable-2.1.0.dist-info/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pydantic",
+      "version": "2.14.1",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "pydantic-2.14.1.dist-info/licenses/LICENSE",
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pydantic-ai-slim",
+      "version": "2.62.0",
+      "expression": "MIT",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "pydantic_ai_slim-2.62.0.dist-info/licenses/LICENSE",
+          "sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pydantic-graph",
+      "version": "2.62.0",
+      "expression": "MIT",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "pydantic_graph-2.62.0.dist-info/licenses/LICENSE",
+          "sha256": "bc0e89738f36944c8106e1947c3d69631f9c33b8f1bcb60ec4f89d677d2dfcf4"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.50.1",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "pydantic_core-2.50.1.dist-info/licenses/LICENSE",
+          "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "pyparsing-3.3.3.dist-info/licenses/LICENSE",
+          "sha256": "a5425f9dc14ac74d4c5f0b679e941f2442e32cca7452a4418d5b1a49893ebe4e"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "pytest-9.1.1.dist-info/licenses/LICENSE",
+          "sha256": "ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29",
+      "expression": "Apache-2.0 AND CNRI-Python",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "regex-2026.9.29.dist-info/licenses/LICENSE.txt",
+          "sha256": "3d220c06594b826bbabf110312f60f385f99e57e529fa4b9e536f79091f8b4c7"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "legacy_label": "Apache-2.0",
+      "license_files": [
+        {
+          "path": "requests-2.34.2.dist-info/licenses/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+        },
+        {
+          "path": "requests-2.34.2.dist-info/licenses/NOTICE",
+          "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "MIT",
+      "license_files": [
+        {
+          "path": "rich-15.0.0.dist-info/licenses/LICENSE",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "ruff",
+      "version": "0.17.3",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "ruff-0.17.3.dist-info/licenses/LICENSE",
+          "sha256": "2597d854122b77ddc71971564ca2350a37608575ce324adc5650a2b2051c8f18"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "legacy_label": "MIT OR Apache-2.0",
+      "license_files": [
+        {
+          "path": "sniffio-1.3.1.dist-info/LICENSE",
+          "sha256": "652c878488d1456361e08c3f8607fd7ba59892a14103d15cce4ff93c85b5cc8b"
+        },
+        {
+          "path": "sniffio-1.3.1.dist-info/LICENSE.APACHE2",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "sniffio-1.3.1.dist-info/LICENSE.MIT",
+          "sha256": "3e6dae555eb92787fc82d1d48355677f454c7f65aeb38d3f9e72bf9a3daf034b"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "sortedcontainers",
+      "version": "2.4.0",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "legacy_label": "Apache 2.0",
+      "license_files": [
+        {
+          "path": "sortedcontainers-2.4.0.dist-info/LICENSE",
+          "sha256": "1db7cae7fce6452e2e608e401a0f953e0133e4c2d75db69fb8ae851d2086f5b6"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "starlette",
+      "version": "1.10.0",
+      "expression": "BSD-3-Clause",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "starlette-1.10.0.dist-info/licenses/LICENSE.md",
+          "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "stevedore",
+      "version": "5.9.1",
+      "expression": "Apache-2.0",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "stevedore-5.9.1.dist-info/licenses/AUTHORS",
+          "sha256": "4106ff4e10912be02fcd6931e6c3c41bd6b145938e1359c2b8144ad25d15cd48"
+        },
+        {
+          "path": "stevedore-5.9.1.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.14.0",
+      "expression": null,
+      "classifiers": [],
+      "legacy_label": "Long license text in METADATA",
+      "license_files": [
+        {
+          "path": "tiktoken-0.14.0.dist-info/licenses/LICENSE",
+          "sha256": "258463fc3788f1f9b6a3f1820d8a87481ac24018d53167597e25d3e9031851ca"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "tomli",
+      "version": "2.5.0",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "tomli-2.5.0.dist-info/licenses/LICENSE",
+          "sha256": "34b59b39e7ba577a1d86924218c71229b163d3bf3903aec784299f725c89d324"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "tomli_w",
+      "version": "1.2.0",
+      "expression": null,
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "tomli_w-1.2.0.dist-info/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.5",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "truststore-0.10.5.dist-info/licenses/LICENSE",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "types-psutil",
+      "version": "7.2.2.20260906",
+      "expression": "Apache-2.0",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "types_psutil-7.2.2.20260906.dist-info/licenses/LICENSE",
+          "sha256": "295f8538c94ae5c3043301cf7cff1c852dab6a786a8ddee471e061b40d5ecabe"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "typing_inspection-0.4.4.dist-info/licenses/LICENSE",
+          "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "expression": "PSF-2.0",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "expression": "MIT",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "expression": "BSD-3-Clause",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "uvicorn-0.54.0.dist-info/licenses/LICENSE.md",
+          "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371"
+        }
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "name": "zyntrava-shield",
+      "version": "0.9.1a1",
+      "expression": "Apache-2.0",
+      "classifiers": [],
+      "legacy_label": "",
+      "license_files": [
+        {
+          "path": "zyntrava_shield-0.9.1a1.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "zyntrava_shield-0.9.1a1.dist-info/licenses/NOTICE",
+          "sha256": "0788945452e5914d1a0e9c91608906f5645f52439ddc880cc3d2cb904bccfc83"
+        }
+      ],
+      "needs_manual_review": false
+    }
+  ],
+  "node": [
+    {
+      "app": "dashboard",
+      "package": "node_modules/@alloc/quick-lru",
+      "version": "5.3.0",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@axe-core/playwright",
+      "version": "4.14.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@emnapi/runtime",
+      "version": "1.11.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/colour",
+      "version": "1.1.0",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-darwin-arm64",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-darwin-x64",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-freebsd-wasm32",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-libvips-darwin-arm64",
+      "version": "1.3.4",
+      "license": "LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-libvips-darwin-x64",
+      "version": "1.3.4",
+      "license": "LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-libvips-linux-arm",
+      "version": "1.3.4",
+      "license": "LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-libvips-linux-arm64",
+      "version": "1.3.4",
+      "license": "LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-libvips-linux-ppc64",
+      "version": "1.3.4",
+      "license": "LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-libvips-linux-riscv64",
+      "version": "1.3.4",
+      "license": "LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-libvips-linux-s390x",
+      "version": "1.3.4",
+      "license": "LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-libvips-linux-x64",
+      "version": "1.3.4",
+      "license": "LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-libvips-linuxmusl-arm64",
+      "version": "1.3.4",
+      "license": "LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-libvips-linuxmusl-x64",
+      "version": "1.3.4",
+      "license": "LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-linux-arm",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-linux-arm64",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-linux-ppc64",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-linux-riscv64",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-linux-s390x",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-linux-x64",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-linuxmusl-arm64",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-linuxmusl-x64",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-wasm32",
+      "version": "0.35.5",
+      "license": "Apache-2.0 AND LGPL-3.0-or-later AND MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-webcontainers-wasm32",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-win32-arm64",
+      "version": "0.35.5",
+      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-win32-ia32",
+      "version": "0.35.5",
+      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@img/sharp-win32-x64",
+      "version": "0.35.5",
+      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@jridgewell/gen-mapping",
+      "version": "0.3.13",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@jridgewell/remapping",
+      "version": "2.3.5",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@jridgewell/resolve-uri",
+      "version": "3.1.2",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@jridgewell/sourcemap-codec",
+      "version": "1.6.0",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@jridgewell/trace-mapping",
+      "version": "0.3.31",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@next/env",
+      "version": "16.4.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@next/swc-darwin-arm64",
+      "version": "16.4.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@next/swc-darwin-x64",
+      "version": "16.4.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@next/swc-linux-arm64-gnu",
+      "version": "16.4.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@next/swc-linux-arm64-musl",
+      "version": "16.4.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@next/swc-linux-x64-gnu",
+      "version": "16.4.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@next/swc-linux-x64-musl",
+      "version": "16.4.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@next/swc-win32-arm64-msvc",
+      "version": "16.4.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@next/swc-win32-x64-msvc",
+      "version": "16.4.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@playwright/test",
+      "version": "1.64.1",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@swc/helpers",
+      "version": "0.5.23",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/node",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-android-arm64",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-darwin-arm64",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-darwin-x64",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-freebsd-x64",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-linux-arm-gnueabihf",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-linux-arm64-gnu",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-linux-arm64-musl",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-linux-x64-gnu",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-linux-x64-musl",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-wasm32-wasi",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-wasm32-wasi/node_modules/@emnapi/core",
+      "version": "1.11.1",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-wasm32-wasi/node_modules/@emnapi/runtime",
+      "version": "1.11.1",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-wasm32-wasi/node_modules/@emnapi/wasi-threads",
+      "version": "1.2.2",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-wasm32-wasi/node_modules/@napi-rs/wasm-runtime",
+      "version": "1.1.4",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-wasm32-wasi/node_modules/@tybys/wasm-util",
+      "version": "0.10.2",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-wasm32-wasi/node_modules/tslib",
+      "version": "2.8.1",
+      "license": "0BSD",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-win32-arm64-msvc",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/oxide-win32-x64-msvc",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@tailwindcss/postcss",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@types/node",
+      "version": "26.6.5",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@types/react",
+      "version": "19.3.0",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@types/react-dom",
+      "version": "19.3.0",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-aix-ppc64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-darwin-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-darwin-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-freebsd-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-freebsd-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-linux-arm",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-linux-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-linux-loong64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-linux-mips64el",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-linux-ppc64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-linux-riscv64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-linux-s390x",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-linux-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-netbsd-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-netbsd-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-openbsd-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-openbsd-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-sunos-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-win32-arm64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/@typescript/typescript-win32-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/axe-core",
+      "version": "4.14.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/baseline-browser-mapping",
+      "version": "2.11.34",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/caniuse-lite",
+      "version": "1.0.30001819",
+      "license": "CC-BY-4.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/client-only",
+      "version": "0.0.1",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/csstype",
+      "version": "3.2.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/detect-libc",
+      "version": "2.1.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/enhanced-resolve",
+      "version": "5.26.0",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/graceful-fs",
+      "version": "4.2.11",
+      "license": "ISC",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/jiti",
+      "version": "2.7.0",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-android-arm64",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-darwin-arm64",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-darwin-x64",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-freebsd-x64",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-linux-arm-gnueabihf",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-linux-arm64-gnu",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-linux-arm64-musl",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-linux-x64-gnu",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-linux-x64-musl",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-win32-arm64-msvc",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/lightningcss-win32-x64-msvc",
+      "version": "1.32.0",
+      "license": "MPL-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/magic-string",
+      "version": "0.30.21",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/nanoid",
+      "version": "3.3.20",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/next",
+      "version": "16.4.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/next/node_modules/postcss",
+      "version": "8.5.23",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/picocolors",
+      "version": "1.1.1",
+      "license": "ISC",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/playwright",
+      "version": "1.64.1",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/playwright-core",
+      "version": "1.64.1",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/postcss",
+      "version": "8.5.32",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/semver",
+      "version": "7.8.5",
+      "license": "ISC",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/sharp",
+      "version": "0.35.5",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/source-map-js",
+      "version": "1.2.2",
+      "license": "BSD-3-Clause",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/styled-jsx",
+      "version": "5.1.6",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/tailwindcss",
+      "version": "4.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/tapable",
+      "version": "2.3.3",
+      "license": "MIT",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/tslib",
+      "version": "2.8.1",
+      "license": "0BSD",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/typescript",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "needs_manual_review": false
+    },
+    {
+      "app": "dashboard",
+      "package": "node_modules/undici-types",
+      "version": "8.9.0",
+      "license": "MIT",
+      "needs_manual_review": false
+    }
+  ],
+  "unknown_python": [],
+  "unknown_node": [],
+  "limits": "Metadata inventory, not legal clearance. Review actual notices and distribution scope.",
+  "bundled_component_caveat": "Next.js 16.4.6 includes compiled picomatch; tagged upstream source pins 4.0.1. Not a separate lock entry. Dependency implementation files are not redistributed in this source ZIP. See dependency-advisory.md."
+}

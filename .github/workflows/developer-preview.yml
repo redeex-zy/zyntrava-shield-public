@@ -1,0 +1,69 @@
+name: Reviewed manual developer preview checks
+on:
+  workflow_dispatch:
+    inputs:
+      reviewed_commit:
+        description: Full 40-character SHA of the main commit already reviewed by the operator
+        type: string
+        required: true
+      trusted_source:
+        description: I reviewed this source/configuration and authorize this trusted build
+        type: boolean
+        required: true
+        default: false
+permissions:
+  contents: read
+jobs:
+  checks:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - name: Validate reviewed manual dispatch before checkout
+        shell: python
+        env:
+          REVIEWED_COMMIT: ${{ inputs.reviewed_commit }}
+          TRUSTED_SOURCE_ACK: ${{ inputs.trusted_source }}
+        run: |
+          import os
+          import re
+          reviewed = os.environ.get("REVIEWED_COMMIT", "")
+          allowed = (
+              os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
+              and os.environ.get("GITHUB_REF") == "refs/heads/main"
+              and re.fullmatch(r"[0-9a-f]{40}", reviewed) is not None
+              and reviewed == os.environ.get("GITHUB_SHA")
+              and os.environ.get("TRUSTED_SOURCE_ACK") == "true"
+          )
+          if not allowed:
+              raise SystemExit("Refusing build: require reviewed main SHA and explicit trusted-source acknowledgement")
+          print("Reviewed manual dispatch accepted; no credentials displayed")
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+        with:
+          version: 0.13.6
+          python-version: '3.13'
+          enable-cache: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24.21.0'
+      - run: npm --prefix apps/dashboard ci --ignore-scripts
+      - run: npm --prefix apps/dashboard run typecheck
+      - run: npm --prefix apps/dashboard test
+      - run: npm --prefix apps/dashboard audit
+      - run: npm --prefix apps/dashboard run build
+        env:
+          NEXT_TELEMETRY_DISABLED: '1'
+      - run: uv sync --locked --extra agent
+      - run: uv run --no-sync pytest -q
+      - run: uv run --no-sync ruff check src tests scripts examples
+      - run: uv run --no-sync ruff format --check src tests scripts examples
+      - run: uv run --no-sync mypy src/zyntrava
+      - run: uv run --no-sync bandit -r src
+      - run: uv run --no-sync pip-audit --local
+      - run: uv build
+      # This workflow is prepared only: no hosted run, release or upload was made.

@@ -1,0 +1,89 @@
+[build-system]
+requires = ["hatchling==1.30.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zyntrava-shield"
+version = "0.9.1a1"
+description = "Local, policy-enforced tool execution for controlled AI agent research"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+authors = [{ name = "Mohamed Reda Mejhed" }]
+# Creator-approved for licensable original contributions; third-party exceptions remain.
+license = "Apache-2.0"
+# SDK-only wheel/sdist omit the dashboard MIT template; source ZIP retains its notice.
+license-files = ["LICENSE", "NOTICE"]
+dependencies = [
+    "fastapi==0.162.0",
+    "httpx==0.28.1",
+    "psutil==7.2.2",
+    "pydantic==2.14.1",
+    "uvicorn==0.54.0",
+]
+
+[project.optional-dependencies]
+agent = [
+    "pydantic-ai-slim[openai]==2.62.0",
+    "opentelemetry-api==1.45.2", # Patched trace-context parser; GHSA-mf5v-w3w3-f6cg.
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.1.1",
+    "httpx==0.28.1",
+    "ruff==0.17.3",
+    "mypy==2.4.0",
+    "bandit==1.9.4",
+    "pip-audit==2.10.1",
+    "types-psutil>=7.2.2.20260906",
+]
+
+[project.scripts]
+zyntrava = "zyntrava.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/zyntrava"]
+
+[tool.hatch.build.hooks.custom]
+path = "scripts/hatch_build.py"
+
+[tool.hatch.build.targets.sdist]
+# Do not rely on Git ignore discovery: developer source ZIPs have no .git directory.
+# The complete reviewable source/docs/tests are supplied by the curated source ZIP.
+only-include = [
+    "src", "models", "scripts/hatch_build.py",
+    "benchmarks/corpus-v1.json", "benchmarks/corpus-v2.json", "benchmarks/corpus-v3.json",
+    "README.md", "LICENSE", "NOTICE", "pyproject.toml", "uv.lock", "requirements-preview.txt",
+]
+exclude = [
+    "**/__pycache__/**", "**/*.pyc",
+    "/artifacts/**", "/.wheel-smoke/**",
+    "/benchmarks/agent09-results/**/workspace/**",
+    "/benchmarks/agent09-results/**/*.sqlite3*",
+    "/benchmarks/pilot091-results/**/workspace/**",
+    "/benchmarks/pilot091-results/**/*.sqlite3*",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["live: opt-in real local model inference"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S105"] # Only synthetic fixture credentials; never real secrets.
+"src/zyntrava/lab/*" = ["S101"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+files = ["src/zyntrava"]
+
+[tool.uv]
+required-version = "==0.13.6"
