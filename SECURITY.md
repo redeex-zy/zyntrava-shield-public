@@ -1,67 +1,101 @@
-# Security policy — experimental private-staging source candidate
+# Security policy — Zyntrava Shield experimental source
 
-## Versions and scope
+## Supported research version
 
-Only the exact 0.9.1a1 candidate identified in `SOURCE-INVENTORY.json` is under
-local review. There is no supported stable/production release or promised support
-lifetime. Independent adversarial auditing is incomplete. No tool guarantees protection.
+**0.9.1a1** is the only version currently accepted for experimental security review.
+The approved staging baseline is `49402a1c615ebadf692c927845cb14e9d7581606`.
+This policy update is prepared separately; it does not replace that sealed source
+candidate or authorize publication. There is no supported stable/production release,
+response-time commitment or promised support lifetime. Independent adversarial
+security auditing is incomplete. No security tool guarantees protection.
 
-In scope: registered tool request validation and default-deny authorization, file
-and numeric-loopback HTTP scopes, operator approvals, audit-before-effect, API
-credential/session binding, controlled release boundaries and the returned-final-
-answer gate of the supported Pydantic AI adapter. Reproduce using dummy data and
-owned local receivers; report actual unauthorized effects separately from proposals.
+## Confidential reporting: NOT VERIFIED — publication blocker
 
-Outside coverage: arbitrary native/shell/MCP/Python tools, unrelated agents,
-compromised host/operator/OS, provider transport, raw framework messages, tracing,
-external logs and persistent external agent memory. This SDK is not OS isolation.
-There is no validated public management, real-data, multi-user or production setup.
-Task recovery is unreliable; a denial does not prove the user task completes.
+**There is currently no verified confidential reporting destination. Do not submit
+sensitive vulnerability details to GitHub issues, discussions, pull requests or
+an assumed personal email address. Do not disclose vulnerability details publicly
+before coordinating a private reporting channel and disclosure plan.**
 
-## Confidential reporting — RELEASE BLOCKER
+On 17 November 2026, authenticated owner/admin checks of the PRIVATE staging
+repository returned HTTP 404 for both the native private-vulnerability-reporting
+enable request and its subsequent setting read-back. Native reporting was not
+successfully enabled or verified. Both project repositories remain PRIVATE.
+GitHub's native feature is documented for public repositories; this project must
+not become public simply to obtain it.
 
-**No confidential reporting destination has been established or verified for this
-candidate. Do not publish a sensitive report as a public issue, and do not guess a
-personal email address.** A private reviewer must first agree a verified channel
-with the creator through an already established relationship.
+The creator has confirmed that no dedicated, verified security-reporting inbox
+exists yet. No address is advertised, no test email has been sent, and no external
+report submission/receipt/reply or notification delivery has been verified.
+A private source issue tracker is not an external confidential reporting channel:
+outsiders cannot normally use it, and source collaborators may see its issues.
 
-Before publication the creator must configure and test a confidential route,
-replace this paragraph with its exact verified destination, and verify notifications.
-GitHub private vulnerability reporting is documented for public repositories and
-may be unavailable in private staging. It has **not** been enabled or verified here.
-The proposed private-staging alternative is a dedicated private reporting repository
-limited to the creator and the specific consenting reviewer, with text-only synthetic
-reports until receipt/reply, notifications and unauthorized-access tests pass.
-Do not post vulnerability details in general staging issues accessible to all reviewers.
-No actual reporting repository or address has been created, selected or verified. Follow the [owner setup procedure](docs/security-reporting-setup.md).
-An ordinary public issue template is not confidential reporting.
+Until a channel is verified, retain any findings privately. Reviewers who already
+have an established, trusted relationship with the creator may use that relationship
+to agree a channel first; it is not an advertised general intake mechanism. The
+[owner setup and verification procedure](docs/security-reporting-setup.md) explains
+the remaining email setup and future native-reporting steps. It contains no live
+reporting address. A verified destination must be added here before public release.
 
-Use [the report template](reviewer/VULNERABILITY-REPORT.md). Include revision/package
-hash, supported integration/configuration, claimed boundary, minimal synthetic
-steps, actual proposed and executed actions, receipts/redacted audit identifiers,
-expected behavior, observed impact, reproducibility and failures. Do not include
-real secrets, personal data or live targets.
+## Security boundaries in scope
 
-## Coordination and authorized testing
+- Registered tool-call validation and default-deny authorization in the broker.
+- Supported file-resource scopes and numeric-loopback HTTP destination/request scopes.
+- Operator approvals, expiry and single use; audit-before-effect enforcement.
+- API credential/session binding and supported controlled-release boundaries.
+- The returned-final-answer gate of the supported Pydantic AI adapter.
 
-Proposed process: acknowledge privately when possible, reproduce in a disposable
-local workspace, agree impact and remediation, add side-effect regression tests,
-share a fix privately, then coordinate publication and researcher attribution with
-consent. No response-time guarantee, bounty, legal safe harbor or independent
-certification is offered. Never test a third-party service or real account using
-this project's examples. Do not perform real payments, disable host security,
-reset a classified session or automatically retry an uncertain side effect.
+Report actual unauthorized side effects and data exposure separately from proposed
+actions or suspicious text. A rejected proposal does not prove task completion.
 
-The creator must approve the final policy and establish the channel before release.
+## Known limitations and exclusions
 
+Arbitrary unregistered/native/shell/MCP/Python tools, unrelated agents, compromised
+hosts/operators/OS accounts, provider transport, raw framework messages, tracing,
+external logs and persistent external agent memory are outside these boundaries.
+The SDK is an in-process broker, not system-wide protection or production OS isolation.
+Public management, real-data and multi-user production deployments are not validated.
+Agent recovery after denial remains unreliable. Experimental recovery mechanisms
+are not approved for default use. The project has no independent certification,
+universal prompt-injection-prevention or trademark-clearance claim.
 
-## Accepted scope and build restriction
+The known Next.js/vendored-picomatch advisory **GHSA-fc5q-39xc-vjpf** remains a
+conditionally accepted build-time residual for this source-only preview. Build
+only reviewed, trusted source/configuration without privileged credentials; use
+manual-only CI and exclude binary, compiled-dashboard, runtime and model distributions.
+The workflow requires a reviewed matching main SHA and explicit trust acknowledgement
+before checkout. These restrictions do not fix the upstream vulnerability. Hosted
+CI enforcement and account-wide app access are not fully validated. See the
+[dependency assessment](docs/dependency-advisory.md) and
+[release gates](docs/release-readiness.md).
 
-The creator conditionally accepts the known bundled Next.js/picomatch build-time
-residual only for this limited source-only preview, contingent on trusted reviewed
-builds, manual-only CI and exclusion of binary/model/compiled distributions. This
-does not fix the upstream vulnerability or authorize public publication. Build no
-unreviewed source/configuration and supply no privileged credentials to builds.
-The prepared workflow requires a matching reviewed main SHA and explicit trust
-acknowledgement before checkout. Hosted CI and all reporting channels remain
-unverified. See the dependency assessment and current release decision.
+## What to include once a private channel is verified
+
+Use the [vulnerability report template](reviewer/VULNERABILITY-REPORT.md). Include:
+
+- Version, exact revision/package hash and supported integration/configuration.
+- Affected trust boundary, expected behavior, concrete impact and suspected severity.
+- Minimal reproducible commands with synthetic data and owned local services.
+- Separate evidence for attack encountered/activated, forbidden proposal, policy
+  rejection, actual execution/effects and legitimate task completion or failure.
+- Duplicate or uncertain effects, redacted audit identifiers, environment/model
+  versions, reproducibility limits and negative results.
+- A permitted private reply method and researcher attribution preference, if desired.
+
+Do not send credentials, personal documents, production databases, private conversation
+history, live targets or executable attachments. Start with minimal redacted text.
+
+## Responsible testing and coordinated disclosure
+
+Test only systems you own or have explicit authorization to assess. Use disposable
+local environments, dummy files/credentials and owned loopback receivers. Do not
+test third-party services or real financial accounts, perform real payments,
+disable host protections, reset classified sessions or automatically retry uncertain
+side effects. Never expand testing scope without fresh authorization.
+
+Once private intake works, the intended process is to acknowledge privately,
+reproduce and assess impact, agree remediation/disclosure with the reporter,
+add regression tests, share a proposed fix privately and credit the reporter only
+with consent. No response deadline, bounty, legal safe harbor or guaranteed fix
+is offered. No confidential report should enter general issue templates or public
+release notes before coordination. Reporting setup and public publication remain
+separate owner decisions.
