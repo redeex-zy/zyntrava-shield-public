@@ -1,8 +1,10 @@
-# Picomatch advisory assessment â€” 17 November 2026
+# Picomatch advisory assessment — 17 November 2026
 
-This separate 0.9.1a1 source candidate reduces development-tool exposure. It does
-not patch picomatch upstream, eliminate all vulnerable bundled code, or authorize
-publication. The sealed 180-file predecessor and its ZIP are preserved.
+This dated assessment records the 0.9.1a1 source preview's development-tool
+exposure. It does not patch picomatch upstream or eliminate all vulnerable bundled
+code. The owner subsequently authorized limited source publication subject to the
+trusted-build/manual-CI/source-only restrictions below. The sealed predecessor and
+its ZIP are preserved; see [current preview status](release-readiness.md).
 
 ## Dependency paths and classification
 
@@ -127,9 +129,11 @@ Historical evidence and reported model measurements are not relabeled as new run
 the separately audited Vitest chain is removed and tests remain reproducible;
 accept and disclose the unpatched, trusted-build-only Next.js residual. There is
 no demonstrated remote dashboard exploit, and no general upstream remediation.
-**NO-GO for actual publication** until confidential reporting is configured/tested,
-owner residual-risk/branding review is complete and the exact archive/action has
-explicit approval. This is experimental software, not production security clearance.
+The owner subsequently accepted that scoped residual risk, provisionally approved
+the name and authorized the source preview. Native GitHub reporting is now enabled;
+its delivery/notification checks remain separate. See [current status](release-readiness.md)
+and [reporting details](security-reporting-setup.md). This assessment is not a new
+upstream-patch check, binary-distribution clearance or production security approval.
 
 Primary implementation references:
 [Next.js tagged package](https://github.com/vercel/next.js/blob/v16.4.6/packages/next/package.json),

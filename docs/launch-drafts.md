@@ -1,11 +1,12 @@
 # Unpublished presentation drafts
 
-These have not been posted, submitted or sent. Approvals and the confidential
-reporting route are prerequisites. Insert a real approved repository URL only after
-it exists; do not turn a placeholder into a claim that it is already published.
+These announcement drafts have not been posted, submitted or sent. Source is now
+public at https://github.com/redeex-zy/zyntrava-shield-public and GitHub private
+reporting is enabled. Announcements still require owner approval; no posting is
+performed by this documentation update. See [current status](release-readiness.md).
 
-**GitHub description:** Experimental policy broker for registered AI-agent tools,
-with Pydantic AI examples and reproducible local synthetic tests.
+**Owner-set GitHub description (18 November 2026):** Experimental security layer
+for AI agents, enforcing tool permissions and auditing unauthorized actions.
 
 **Tagline:** Intelligence Deserves Protection.
 
@@ -17,7 +18,7 @@ is claimed. Confirm any current student affiliation before adding it publicly.
 
 **LinkedIn / developer-community draft:**
 
-I am preparing an experimental developer preview of Zyntrava Shield, an AI-agent
+I have made an experimental source developer preview of Zyntrava Shield available, an AI-agent
 security project I created in Morocco. It checks registered tool calls against
 operator-defined permissions outside the model, before execution.
 
@@ -31,8 +32,9 @@ system-wide protection, independent certification or production-ready software.
 Recovery after a block is still unreliable. I welcome reproducible installation
 feedback and independently authored, authorized synthetic tests. Please use the
 verified private reporting route for suspected vulnerabilities, never public exploit
-details or real credentials. The final release link and reporting destination will
-be added only after the release gates are satisfied.
+details or real credentials. Source: https://github.com/redeex-zy/zyntrava-shield-public.
+Private reports: GitHub's reporting form or zyntrava.security@gmail.com, as described
+in SECURITY.md. This draft is not an announcement made by the project.
 
 ## Three contribution opportunities
 

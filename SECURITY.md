@@ -1,47 +1,36 @@
-# Security policy — Zyntrava Shield experimental source
+# Security policy — Zyntrava Shield
 
-## Supported research version
+## Supported experimental version
 
-**0.9.1a1** is the only version currently accepted for experimental security review.
-The approved staging baseline is `49402a1c615ebadf692c927845cb14e9d7581606`.
-The original commit and sealed archive are preserved; this policy accompanies a
-new PRIVATE release candidate and does not authorize publication. There is no supported stable/production release,
-response-time commitment or promised support lifetime. Independent adversarial
-security auditing is incomplete. No security tool guarantees protection.
+**0.9.1a1** is the version currently accepted for experimental security review.
+This repository is a **public source-only developer preview**. There is no supported
+stable/production release, response-time commitment or promised support lifetime.
+Independent adversarial security auditing is incomplete. No security tool guarantees
+protection. See [current preview status](docs/release-readiness.md).
 
-## Confidential vulnerability-reporting contact
+## Report privately
 
-Send private vulnerability reports to
-**[zyntrava.security@gmail.com](mailto:zyntrava.security@gmail.com)**.
-Do not disclose vulnerability details publicly in issues, discussions or pull
-requests before coordinating a private reporting and disclosure plan.
+Use **[Report a vulnerability on GitHub](https://github.com/redeex-zy/zyntrava-shield-public/security/advisories/new)**
+or email **[zyntrava.security@gmail.com](mailto:zyntrava.security@gmail.com)**.
+Do not disclose vulnerability details in public issues, discussions or pull requests
+before coordinating a private reporting and disclosure plan.
 
-**Verification status: owner-confirmed email operation and account controls.** The owner
-reports that a test email from another account was received by this inbox and that
-a reply from the security inbox reached the original sender. The owner also confirms
-working Gmail notifications, enabled Google 2-Step Verification and review of GitHub
-App permissions. These are **owner attestations, not independent verification**:
-the development assistant did not inspect the inbox or account security settings.
-Mailbox delegates/forwarding and unauthorized-user access tests have not been reported
-complete; two-step verification alone does not establish those properties. Full
-reporting-process assurance remains limited. Do not include real secrets or sensitive
-personal data; start with a minimal redacted text report. Ordinary email is not
-end-to-end encrypted.
+**Native GitHub reporting is enabled.** On 18 November 2026, the setting returned
+`enabled: true` and an unauthenticated check of Security → Advisories found the
+**Report a vulnerability** option. This verifies enablement and the public entry
+point, not end-to-end report submission, receipt, reply, access controls or delivery.
+GitHub security-report notification preferences remain unverified.
 
-On 17 November 2026, authenticated owner/admin checks of the PRIVATE staging
-repository returned HTTP 404 for both the native private-vulnerability-reporting
-enable request and its subsequent setting read-back. Native reporting was not
-successfully enabled or verified. Both project repositories remain PRIVATE.
-GitHub's native feature is documented for public repositories; this project must
-not become public simply to obtain it.
+**Email operation is owner-confirmed.** The owner verified receipt from another
+account and delivery of a reply to the original sender, and confirms Gmail
+notifications, Google 2-Step Verification and GitHub App permission review. These
+are owner attestations, not independent inbox/account inspection. Mailbox delegates,
+forwarding and unauthorized-user access tests have not been reported complete.
+Ordinary email is not end-to-end encrypted: start with minimal redacted text and
+agree a protected exchange before sending sensitive material.
 
-A private source issue tracker is not an external confidential reporting channel:
-outsiders cannot normally use it, and source collaborators may see its issues.
-The
-[owner setup and verification procedure](docs/security-reporting-setup.md) explains
-the owner-confirmed checks, remaining access-control checks and future native-reporting steps.
-The contact is approved for this PRIVATE source candidate; it does not authorize
-a public release or imply a completed security audit.
+See [reporting setup and remaining verification steps](docs/security-reporting-setup.md).
+An enabled channel is not independent certification or a guarantee of confidentiality.
 
 ## Security boundaries in scope
 
@@ -105,5 +94,6 @@ reproduce and assess impact, agree remediation/disclosure with the reporter,
 add regression tests, share a proposed fix privately and credit the reporter only
 with consent. No response deadline, bounty, legal safe harbor or guaranteed fix
 is offered. No confidential report should enter general issue templates or public
-release notes before coordination. Reporting setup and public publication remain
-separate owner decisions.
+release notes before coordination. The public source preview does not authorize
+deployments, account access or broader testing. Reporting settings do not establish
+independent security certification.
