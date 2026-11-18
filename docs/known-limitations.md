@@ -29,8 +29,11 @@
   at assessment time. Use only trusted build source/configuration; a clean npm
   audit is not a complete bundled-code audit. No input route from the supported
   Python/static-dashboard runtime was found. See [assessment](dependency-advisory.md).
-- Confidential reporting is unconfigured/unverified. Zyntrava Shield is retained
-  provisionally with unresolved trademark clearance; public publication is not authorized.
+- GitHub private vulnerability reporting is enabled and its public entry point was
+  verified. End-to-end native report delivery and GitHub notification preferences
+  remain unverified; email receipt/reply are owner-confirmed. See [reporting status](security-reporting-setup.md).
+- Zyntrava Shield is provisionally approved as the public research name; trademark
+  clearance remains unresolved. Public source availability is not deployment approval.
 
 See [verification](candidate-verification.md), [security policy](../SECURITY.md)
-and [release decision](release-readiness.md) before using or sharing this candidate.
+and [release decision](release-readiness.md) before using or sharing this source preview.

@@ -1,5 +1,7 @@
-# Executed developer-preview verification
+# Historical developer-preview verification
 
+This dated record retains the original development checks and failures. For the
+public source preview and current reporting status, see [release status](release-readiness.md).
 All results are developer-assisted local checks, not independent certification.
 Python 3.13.18; application dependencies from the committed uv lock and hashed pip
 export. No paid model API or production credentials. The exact private engineering
@@ -39,8 +41,9 @@ No new Docker validation, native Linux neural inference, full screen-reader revi
 container OS CVE audit or public GitHub CI run was performed for this documentation/
 SDK milestone. Prior Docker research does not establish production isolation.
 New source/wheel installation is verified; the frozen desktop installer is preserved,
-not rebuilt. Binary/compiled-asset licensing review and a verified private disclosure
-route remain prerequisites for publication.
+not rebuilt. Binary/compiled-asset distribution still requires separate licensing
+review. Reporting and source-publication decisions were pending at this historical
+milestone; their current status is recorded separately.
 
 An archive-generation attempt created a valid ZIP/checksum but then failed because
 an identical adjacent verifier already existed. That attempt is retained, not counted

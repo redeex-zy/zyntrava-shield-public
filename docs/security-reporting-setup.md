@@ -1,223 +1,85 @@
-# Confidential reporting setup and verification
+# Confidential reporting: active routes and verification limits
 
-**Contact: [zyntrava.security@gmail.com](mailto:zyntrava.security@gmail.com).**
-**Status: OWNER-CONFIRMED email receipt, reply, notifications and account controls;
-not independently verified.**
-The owner reports successful receipt of a test email from another account and
-successful delivery of a reply from the security inbox to that sender. No inbox
-messages or mail headers were inspected by the development assistant; this is
-owner-attested verification, not an independently reproduced test.
-The owner additionally confirms that **Gmail notifications work**, **Google 2-Step
-Verification is enabled**, and **GitHub App permissions have been reviewed**.
-No independent inbox/account/app inspection or unauthorized-access test is claimed.
-Delegates, forwarding and unauthorized-user access testing have not been reported
-complete. Public publication remains unauthorized and subject to the final source
-review, remaining assurance decisions and explicit approval. Version **0.9.1a1**
-remains experimental. This update sends no email and creates no account, repository,
-collaborator or advisory.
+Status checked **18 November 2026** for the public source preview, version **0.9.1a1**.
+Use [SECURITY.md](../SECURITY.md) for disclosure scope and report requirements.
 
-## Preserved baseline observations and owner confirmations — 17 November 2026
+## Routes available to researchers
 
-- Both `redeex-zy/zyntrava-shield` and `redeex-zy/zyntrava-shield-public` are PRIVATE.
-- Original approved main `49402a1c615ebadf692c927845cb14e9d7581606` is preserved in
-  history. The final private candidate revision is identified in its delivery manifest.
-- An authenticated owner with repository admin access attempted the documented
-  `PUT repos/redeex-zy/zyntrava-shield-public/private-vulnerability-reporting`.
-  GitHub returned HTTP 404. GET before and after also returned HTTP 404. Native
-  reporting is unavailable through the tested private configuration and is not verified.
-- The CLI token has `repo` and `workflow` scopes; it has no `notifications` scope.
-  GET of the repository subscription returned 404 with an explicit missing-scope
-  diagnostic. This does not prove notifications are disabled. Gmail notification
-  delivery is now owner-confirmed; GitHub notification preferences remain unverified.
-- The token cannot enumerate GitHub App installations (403, different token type
-  required). The owner now confirms reviewing GitHub App permissions; this does
-  not become an independent API audit or prove absence of forwarding/external access.
-- The manual-only CI, read-only workflow token, source-only distribution limits and
-  original source commit are unchanged. A documentation branch is not a new approved ZIP.
+- **[GitHub private vulnerability reporting](https://github.com/redeex-zy/zyntrava-shield-public/security/advisories/new)**
+  is enabled for this public repository. Security → Advisories exposes the
+  **Report a vulnerability** option.
+- **[zyntrava.security@gmail.com](mailto:zyntrava.security@gmail.com)** is the
+  owner-designated email alternative. The owner verified inbound receipt and
+  delivery of a private reply. Ordinary email is not end-to-end encryption.
 
-Native private vulnerability reporting is documented for public repositories by
-[GitHub](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/configure-for-a-repository).
-Do not change visibility, refresh token scopes, purchase services or create another
-repository to bypass the current restrictions. A private source issue tracker
-cannot accept normal external reports and is not case-confidential among its readers.
+Begin with minimal redacted text and synthetic reproduction steps. Do not publish
+exploit details in issues or PRs, submit real credentials or run attacks on systems
+you do not own or have permission to test. No response deadline, bounty or legal
+safe harbor is promised.
 
-## Route now: owner-designated dedicated email
+## What has and has not been verified
 
-These steps require the creator's mailbox/provider access and manual action. No
-password, recovery code, API token or private key should be shared with an assistant,
-stored in Git, or pasted into a report. This task sends no email from any account.
-
-1. **Use the designated contact.** The creator supplies and authorizes
-   `zyntrava.security@gmail.com` for private vulnerability reports. Receipt and reply
-   were verified by the owner as described above. No address was inferred from a
-   profile/domain, and no personal sender address or mail header is published.
-2. **Confirm control and access.** Sign in directly to the provider, verify the
-   destination exists and can receive external mail, and verify ownership/control
-   of its alias and backing mailbox. Review delegates, recovery methods, forwarding
-   rules, mailing lists, shared folders, integrations and retention. Limit content
-   access to the owner and explicitly authorized triage participants. Do not grant
-   access to an outside researcher or app as part of setup.
-3. **Protect the account.** Enable the provider's available strong authentication
-   and safe recovery. Keep recovery material outside this project. Review the
-   provider's transport-security support; if using an already-owned domain, review
-   existing SPF/DKIM/DMARC results without publishing or changing DNS here.
-   Avoid auto-forwarding full reports or automatic public ticket creation.
-4. **Configure handling.** Use a private folder/label and notifications the owner
-   can actually monitor; inspect spam/quarantine during testing. Permit plain-text
-   external reports. Keep attachments disabled by process until reviewed; do not
-   run received scripts or commands. Use a minimal acknowledgement only after
-   testing that it replies privately to the intended sender, without echoing secrets.
-5. **Choose confidentiality expectations.** Ordinary email is not end-to-end
-   encryption, even with transport TLS. The mail provider and approved mailbox
-   administrators are trusted parties. Start with redacted text; agree a separately
-   verified protected exchange before highly sensitive material. Do not advertise
-   encryption or an OpenPGP key that has not been configured and verified.
-6. **Complete the remaining harmless checks below.** Preserve the owner's successful
-   receipt/reply and Gmail notification results; do not relabel them as assistant-executed
-   or independently audited. Google 2-Step Verification and GitHub App review are
-   owner-confirmed. Effective mailbox access and forwarding/delegates still need
-   review/testing. Do not contact external researchers, create accounts
-   or send mail automatically.
-7. **Record evidence privately.** Apart from the approved security contact, keep
-   sender addresses, mail headers, receipts, identities and access-control details
-   outside Git. Record only sanitized result
-   summaries in release documents. A test marker is correlation text, not a credential.
-8. **Keep status precise.** SECURITY.md lists the owner-designated contact and
-   distinguishes owner-confirmed controls from incomplete independent/access
-   testing. Update that status only after additional evidence exists. Public
-   publication requires separate approval and a reviewed/resealed changed source
-   candidate. The owner separately authorizes the normal private documentation merge;
-   preserve the original commit/ZIP. This does not authorize public publication.
-
-### Email configuration and verification worksheet
-
-| Field | Required owner decision/evidence |
+| Property | Evidence / status |
 | --- | --- |
-| Dedicated destination | `zyntrava.security@gmail.com`, explicitly supplied and authorized by the owner |
-| Inbound email receipt | VERIFIED BY OWNER: test from another account was received |
-| Reply delivery | VERIFIED BY OWNER: reply reached the original sender |
-| Gmail notification delivery | VERIFIED BY OWNER; not independently reproduced |
-| Google 2-Step Verification | ENABLED, as confirmed by owner; no account settings inspected |
-| GitHub App permissions | REVIEWED BY OWNER; no independent app-access audit |
-| Access controls/readers/delegates | NOT VERIFIED; review actual readers and integrations |
-| Forwarding/ticketing rules | NOT VERIFIED; confirm no public/unapproved exports |
-| Authentication/recovery | Owner confirms 2-Step Verification; recovery/delegation details not independently reviewed |
-| Spam handling/retention | Owner review still required; no test result claimed |
-| Documentation approval | Owner authorizes private main merge and source candidate; no public-release authorization |
+| Repository visibility | PUBLIC, with the original research repository kept private |
+| Native reporting setting | GitHub API returned `enabled: true` on 18 November 2026 |
+| Public report entry point | Unauthenticated Advisories HTML contains Report a vulnerability |
+| Email receipt and private reply | Verified by owner using another account; no inbox artifacts independently inspected |
+| Gmail notifications and Google 2-Step Verification | Owner-confirmed; not a GitHub report-delivery test |
+| GitHub App permission review | Owner-confirmed; external service settings not independently inspected |
+| Native report submission / owner receipt / reply | Not end-to-end tested in this publication operation |
+| GitHub security-alert subscription and delivery | Not verified: CLI lacked notification scope and browser automation stopped at its URL safeguard |
+| Mailbox readers, delegates, forwarding and unauthorized access | Not reported complete; record checks or an explicit owner assurance/risk decision |
 
-No SMTP credentials, private mail headers or fabricated destination are provided.
-The current GitHub token cannot inspect the Gmail inbox. The owner's receipt/reply
-and subsequent confirmations are the evidence recorded here. They are not independent
-verification of notifications, account controls, delegates, forwarding or retention.
+Do not turn the outstanding delivery/access checks into a claim that the reporting
+feature is disabled. Equally, enablement alone does not prove a fully tested process.
+The owner email alternative remains available during those checks.
 
-## Harmless verification — owner-confirmed checks and remaining assurance limits
+## Owner notification check
 
-Use synthetic text only. Do not use a real vulnerability as the test. Preserve the
-owner-reported successful receipt, reply and Gmail notifications; no exact test time, sender identity,
-marker or private receipt artifact was supplied to the assistant. Do not invent
-those details. Record additional evidence privately as the remaining tests run.
+1. In the public repository, select **Watch → Custom → Security alerts**, or
+   **All Activity**. Ensure the repository is not ignored and save.
+2. Open [GitHub notification settings](https://github.com/settings/notifications).
+   Under **Subscriptions → Watching → Notify me**, enable **Email** and **On GitHub**
+   where offered, using an existing verified notification address, and save.
+3. Reload both settings pages and record the selected repository filter and delivery
+   options privately. Do not share credentials or screenshots of private inboxes.
+4. Record actual delivery when a legitimate report arrives, or through a separately
+   authorized harmless end-to-end test. Gmail operation is not evidence that GitHub
+   sends this repository's alerts to that inbox.
 
-1. Agree the destination, intended participants and a unique marker. Suggested
-   subject: **Harmless confidential-channel verification — not a vulnerability**.
-   Body: “Synthetic text only; no security issue. Please reply with the same marker.”
-   Add the marker chosen locally by the owner; this document contains no live marker.
-2. From a separately controlled sender account, submit the text through the actual
-   external reporting path. Confirm sent-mail state alone is not accepted as receipt.
-3. The owner verifies the exact marker in the intended inbox/interface, observes
-   spam/quarantine behavior and confirms the configured in-app/email notification.
-4. The owner replies privately to the intended sender with the marker. The sender
-   confirms the reply and any expected notification. Do not CC unrelated people.
-5. Verify effective access: a logged-out session and a separate unauthorized account
-   cannot read the private inbox, thread, report URL, search results or shared view.
-   Review delegates, apps and forwarding as well; a login prompt alone does not
-   prove the absence of another authorized reader. Avoid screenshots of inbox content.
-6. Do not use attachments until their actual storage/link permissions have been
-   independently tested. Record provider/admin trust boundaries and limitations;
-   finite access tests do not prove arbitrary future confidentiality.
-7. Close/archive the harmless test privately according to the owner's retention
-   decision. Closing or deletion does not erase provider backups or delivered copies.
-8. Mark the full process VERIFIED only after submission, receipt, reply, required
-   notifications, access controls and correct SECURITY.md instructions pass.
-   Owner-confirmed receipt/reply, Gmail notifications, 2-Step Verification and GitHub
-   App review remain owner attestations. Unreported mailbox-access tests remain
-   unverified; record their completion or an explicit owner assurance/risk decision
-   before full reporting-process sign-off. Public release always needs separate approval.
+The current setup does not require changing visibility, creating another repository,
+adding collaborators, broadening token scopes or sending unsolicited test reports.
 
-Private test record (do not commit sender addresses, inbox artifacts or report URLs;
-the designated security contact above is explicitly owner-approved):
+## Optional authorized end-to-end test
 
-```json
-{
-  "channel_status": "OWNER-CONFIRMED OPERATION; INDEPENDENT/ACCESS TESTS INCOMPLETE",
-  "submission": "OWNER-REPORTED TEST FROM ANOTHER ACCOUNT",
-  "owner_receipt": "VERIFIED BY OWNER",
-  "private_reply": "VERIFIED BY OWNER: REACHED ORIGINAL SENDER",
-  "evidence_basis": "Owner statements; no inbox/account artifacts inspected by assistant",
-  "gmail_notification_delivery": "VERIFIED BY OWNER",
-  "google_two_step_verification": "ENABLED AS CONFIRMED BY OWNER",
-  "github_app_permission_review": "CONFIRMED BY OWNER",
-  "github_notification_preferences": "NOT VERIFIED",
-  "unauthenticated_access_denied": "NOT TESTED",
-  "unrelated_account_access_denied": "NOT TESTED",
-  "delegates_apps_forwarding_review": "NOT VERIFIED",
-  "security_policy_matches_owner_designated_contact": true,
-  "sanitized_evidence_ids": []
-}
-```
+Agree participants and synthetic, clearly labelled test content first. An owner
+creating a draft advisory is not a test of an external researcher's reporting path.
 
-## Future native GitHub reporting — only after separately authorized publication
+1. An authorized, separately controlled reporter uses the actual private reporting
+   form. Do not use a real vulnerability, credentials or executable attachments.
+2. The owner confirms receipt in the intended private interface, tests a reply visible
+   to the reporter, and verifies configured GitHub/email notifications. A maintainers-only
+   comment cannot test reporter receipt.
+3. Check advisory participants and effective access. An unrelated account/logged-out
+   session must not read the private report, replies or attachments. Finite tests
+   do not prove arbitrary future confidentiality.
+4. Close the harmless test advisory **without publishing it**. Do not request a CVE,
+   create a temporary fork or grant repository collaborator access as part of this test.
+5. Keep sender identities, inbox artifacts and private report URLs outside Git.
+   Record submission, receipt, reply, notifications and access controls separately.
 
-Maintain the verified email route during any migration. This procedure does not
-authorize changing repository visibility. Public publication must first pass its
-separate owner approval and other release gates. Completing the remaining email
-verification can satisfy the reporting gate without making staging public for a test;
-owner-confirmed operational checks do not independently verify mailbox access control.
+No native report or email was sent by the publication operation. Tests requiring
+additional accounts/access need the owner's authorization and must not be fabricated.
 
-1. After separately approved publication, confirm the intended repository's actual
-   owner/name and PUBLIC visibility. The original research repository stays PRIVATE.
-2. As an authorized admin, open Settings → Security and quality → Advanced Security
-   → Private vulnerability reporting. Enable the native feature where supported.
-   Alternatively use the documented PUT endpoint with a suitable admin credential.
-3. Read back the setting and require `enabled: true`; API failure is not success.
-   This is a future command, **not** a command to run against private staging now:
+## Historical context
 
-   ```sh
-   gh api --method PUT repos/redeex-zy/zyntrava-shield-public/private-vulnerability-reporting
-   gh api --method GET repos/redeex-zy/zyntrava-shield-public/private-vulnerability-reporting --jq .enabled
-   ```
+On 17 November 2026, native reporting checks on private staging returned HTTP 404.
+Those observations remain historical; they no longer describe the public repository.
+The owner subsequently authorized its controlled publication. On 18 November the
+public setting and report entry point were verified. No source or CI change was
+needed to enable reporting, and no production-readiness claim follows.
 
-4. The owner checks repository Watch → Custom → Security alerts (or All Activity),
-   repository notifications enabled, and personal Settings → Notifications →
-   Subscriptions → Watching delivery preferences. Settings alone do not prove
-   delivery. Current CLI notification access is insufficient; do not request tokens.
-5. With separate consent/authority for the test, a non-admin controlled account
-   opens the real Security/Advisories reporting interface and confirms that the
-   current SECURITY.md and Report a vulnerability action are visible. An owner
-   creating a draft advisory does not test outsider submission.
-6. Submit a harmless report and perform the receipt/reply/notification/access tests
-   above. GitHub adds the reporter as an **advisory** participant; this is distinct
-   from repository collaborator access. Review actual advisory permissions, and
-   obtain any necessary authorization before a future test. No account is added here.
-7. Use a normal private advisory reply for the reporter; a maintainers-only
-   confidential comment is intentionally hidden from the reporter and cannot test
-   their receipt. Do not create a temporary fork, CVE request or public advisory.
-8. Close the harmless advisory using Close security advisory without publishing it.
-   Check that public/advisory views expose none of its title/body/replies. Record
-   permitted participants, notifications and retention limits privately.
-9. Only after the full test succeeds, update SECURITY.md with the actual verified
-   reporting destination and keep the previous verified route until migration is safe.
-
-Official references:
-[configuration and notifications](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/configure-for-a-repository),
-[reporter workflow](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/report-privately),
-[maintainer replies and closure](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/fix-reported-vulnerabilities/manage-vulnerability-reports),
-[enable API](https://docs.github.com/en/rest/repos/repos#enable-private-vulnerability-reporting-for-a-repository).
-
-## Actions outside this documentation update
-
-No new reporting repository or outside collaborator is authorized. Do not substitute
-a general private issue tracker for outsider intake. No mailbox/provider account,
-mail transmission, scope refresh, public advisory, release, deployment, Pages site
-or visibility change was performed by the assistant. The owner separately reports
-the successful email receipt/reply test above. The policy and source remain experimental;
-account-wide app access and independent security auditing remain unresolved.
+Primary references: [GitHub reporting and notification configuration](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/configure-for-a-repository),
+[reporter workflow](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/report-privately)
+and [maintainer replies/closure](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/fix-reported-vulnerabilities/manage-vulnerability-reports).

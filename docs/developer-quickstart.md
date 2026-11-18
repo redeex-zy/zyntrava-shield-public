@@ -4,13 +4,14 @@ Use the exact Windows/Linux commands in README. Python 3.13 and venv/pip are req
 Node, a GPU, an account and paid APIs are not required for the scripted exercise.
 `requirements-preview.txt` exports hash-pinned runtime/agent dependencies from uv.lock.
 Source installation uses the existing pinned Hatchling backend through build isolation.
-This is a local source install, not a published PyPI package. Clean-vEnv results and
-scope are recorded in the preview verification manifest and engineering handoff.
+This is a local source install; no PyPI publication is claimed. Clean-venv results
+and scope are recorded in the historical verification manifest and
+[current preview status](release-readiness.md).
 
 | Platform | Scripted SDK | Actual Qwen launcher | Dashboard |
 | --- | --- | --- | --- |
 | Windows / Python 3.13 | Tested | Pinned Qwen3-4B Vulkan path | Authenticated localhost |
-| Linux/WSL / Python 3.13 | Tested | Native launcher unverified | Backend/core tests; browser journey tested on Windows |
+| Linux/WSL / Python 3.13 | Tested | Native launcher unverified | Authenticated localhost; Linux browser follow-up passed on 18 November 2026 |
 
 If the interpreter is unavailable, use an approved full Python 3.13 installation.
 Linux may need matching venv support installed by its operator. Never disable host

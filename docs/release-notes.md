@@ -1,7 +1,8 @@
-# Draft release notes — 0.9.1a1 experimental developer preview
+# Source-preview notes — 0.9.1a1
 
-Unpublished candidate. Do not post until the creator approves the final source,
-license, disclosure channel and provisional branding. This is not a production release.
+The experimental source preview is public. These notes describe its capabilities;
+no GitHub Release, published package or production service was created. See
+[current status](release-readiness.md).
 
 Zyntrava Shield evaluates registered AI-agent tool calls against operator-defined
 permissions before execution. The preview includes a Python SDK, Pydantic AI
@@ -30,7 +31,7 @@ with execution-aware grading, and test dashboard accessibility/disconnected stat
 See CONTRIBUTING and SECURITY before sharing data or exploit details.
 
 
-## Private-staging preparation addendum (unpublished)
+## Licensing, reporting and trusted-build restrictions
 
 The creator approves Apache-2.0 for cleared original source, retains the research
 name provisionally without trademark clearance, and conditionally accepts the
@@ -41,8 +42,11 @@ previous Vitest chain was removed with all six tests/21 assertions retained.
 The new CI has no automatic trigger and validates a reviewed main commit plus
 explicit acknowledgement before checkout. It retains tests/audits and read-only
 contents permission, disables uv caching and contains no upload/release step.
-No hosted workflow or reporting-channel test has run. The source excludes compiled
+No hosted workflow validation is claimed. GitHub private reporting is enabled;
+its setting/public link are verified, email receipt/reply are owner-confirmed and
+end-to-end native delivery/notifications remain unverified. The source excludes compiled
 UI, dependencies/runtime binaries, installers and weights; the generated Next.js
 declaration retains its MIT notice. Source licensing does not clear other bundles.
-Public publication is not authorized, and reporting is not active. Staging uploads
-also need separate explicit approval of the new source hash and private target.
+The owner authorized publication of the source preview. This does not authorize
+packages, binaries, deployments or announcements. Follow [SECURITY.md](../SECURITY.md)
+for confidential reports; preserve the remaining experimental and dependency warnings.

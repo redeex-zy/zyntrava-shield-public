@@ -1,21 +1,21 @@
 # Public source audit and selection
 
-This document preserves historical preparation observations. For current private
-repository/contact status and owner confirmations, see the final update at the end,
-[security policy](../SECURITY.md) and [release gates](release-readiness.md).
+This document preserves historical preparation observations; it is not an
+independent security audit or legal clearance. The owner subsequently authorized
+the separate [public source preview](https://github.com/redeex-zy/zyntrava-shield-public).
+GitHub private reporting is enabled and email operation is owner-confirmed. See
+[current preview status](release-readiness.md) and [SECURITY.md](../SECURITY.md).
+The original private research repository/history remains private and unchanged.
+Past gates and audit counts below describe their dates, not current publication settings.
 
-This is developer-assisted release preparation, not independent security auditing
-or legal clearance. Publication remains blocked on creator decisions and a verified
-confidential reporting channel. Use a **new selected repository**, never change the
-private evidence repository's visibility or rewrite its history.
+`SOURCE-INVENTORY.json` preserves selected baseline/preparation files and hashes;
+it is not a live checksum manifest for later documentation commits. The private
+final COMPLETE-FILE-MANIFEST.json recorded the sealed shipment, including internal
+inventories; it excluded its own sidecar to avoid self-hash recursion. Raw audit
+material and the complete excluded-path inventory are owner-only deliverables,
+never part of the public source ZIP.
 
-`SOURCE-INVENTORY.json` identifies every explicitly selected baseline/preparation
-file and its content hash. The adjacent final COMPLETE-FILE-MANIFEST.json covers
-all shipped files including internal inventories; it excludes its own sidecar to
-avoid self-hash recursion. Private audit material and the complete excluded-path
-inventory are separate owner-only deliverables, never part of the public ZIP.
-
-## Included after inspection, subject to creator approval
+## Selected contents reviewed before publication
 
 Supported broker/adapter/API/CLI source; synthetic lab/grading helpers; portable
 regression tests; dashboard **source**; Python/npm locks; local model manifests;
@@ -90,7 +90,7 @@ dependency upgrade or weakened security policy was applied.
 | Publication category | Materials and action |
 | --- | --- |
 | Technically suitable, subject to release gates | Explicitly allowlisted SDK/adapter/broker/API source, portable tests, dashboard source, synthetic corpora/examples, sanitized complete evidence, generic-path docs and dependency locks |
-| Must be finalized first | SECURITY.md's real verified private destination; final identity/naming decision and new source checksum approval |
+| Gates outstanding at that preparation stage | Confidential destination, provisional naming and source approval; subsequently resolved for the limited public source preview, with notification/access assurance limits retained |
 | Keep private/excluded | Existing history/branches, raw QA/model traces and databases, operational state, original reviewer/installer ZIPs, model/runtime binaries, third-party benchmark copies, videos and unrelated assets |
 | Owner/legal questions | Any subsequently discovered ownership restriction; naming conflicts; contributor policy; future binary/model redistribution obligations |
 
@@ -107,8 +107,9 @@ knowledge, no known other human copyright contributor, and the qualified Apache-
 grant. See [the application record](license-application.md). This update closes the
 pending original-source choice without treating Git identities as title evidence.
 The Next.js template's full MIT attribution is retained separately. Prior audit
-counts above remain historical observations. Publication still requires a verified
-confidential reporting channel and approval of the new checksum/action.
+counts above remain historical observations. The owner later approved the source
+publication; reporting enablement and remaining delivery/access checks are recorded
+in [the current reporting status](security-reporting-setup.md).
 
 ## Fresh dependency-audit limitation
 
@@ -135,9 +136,10 @@ The engine, adapter, permissions, default recovery and saved evidence are unchan
 
 The creator now approves the cleared original-source Apache grant, retains the
 name provisionally and conditionally accepts the bundled Next residual under
-trusted-build/manual-CI/source-only restrictions. Public publication remains
-unauthorized. A separate candidate applies manual-only CI and accurate reporting
-plans without changing engine code, research evidence or the sealed predecessor.
+trusted-build/manual-CI/source-only restrictions. At that preparation stage,
+public release had not yet been approved. A separate candidate applied manual-only
+CI and accurate reporting plans without changing engine code, research evidence
+or the sealed predecessor.
 At that preparation stage no actual reporting channel, remote or hosted validation
 was claimed; historical audit figures above are not relabeled as new measurements.
 
@@ -156,7 +158,9 @@ Apache-2.0 is approved only for cleared source, the name is provisionally approv
 and the Next.js/picomatch residual remains conditionally accepted under trusted-build,
 manual-CI and source-only restrictions. No trademark clearance or upstream fix is claimed.
 
-The exact current source archive, hashes, included-file inventory and newly executed
-checks are in the final delivery manifest/report. Historical results above keep their
-original scope. Public publication remains unauthorized and requires final owner
-review/approval plus resolution or explicit acceptance of remaining reporting assurance.
+The final private candidate's archive, hashes, inventory and executed checks were
+recorded in its delivery manifest/report. Historical results above keep their
+original scope. The owner later authorized public source availability at
+`c79a3467207250aff4edb490f747492a9e743758`. Native reporting enablement/public entry
+are verified; GitHub delivery/notification and mailbox-access assurance remain limited.
+These later settings do not rewrite the historical measurements above.

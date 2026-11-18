@@ -1,16 +1,19 @@
 # Contributing
 
 Start with the [quickstart](docs/developer-quickstart.md) and
-[synthetic exercise](docs/contributor-exercise.md). Public submission workflows are
-drafts until publication is approved. Use only dummy data and owned loopback services.
+[synthetic exercise](docs/contributor-exercise.md). This is a public, experimental
+source preview. Open a focused issue for a non-sensitive bug or propose a small pull
+request with reproduction details. Report security issues privately through
+[SECURITY.md](SECURITY.md). Use only dummy data and owned loopback services.
 
 Review and trust the exact source/configuration before building or running any
 script, including local PR/fork copies. Use a disposable workspace without personal
 data or privileged credentials. A branch name, hash or acknowledgement does not
 make unreviewed code safe. All prepared CI is manual-only; an operator must review
 the main commit and enter its full SHA plus trusted-source acknowledgement. The
-guard runs before checkout; failed validation is not a passed build. No remote
-workflow, push, upload or public publication is authorized by these instructions.
+guard runs before checkout; failed validation is not a passed build. Opening a
+pull request does not trigger this workflow. Hosted enforcement is not validated.
+Contributing does not authorize deployment, package publication or use of credentials.
 
 For the complete selected test suite use Python 3.13, uv 0.13.6 on PATH,
 Node 24.21.0 and the committed locks. Build the dashboard **before** pytest:
@@ -37,7 +40,7 @@ default `.venv`. Playwright's browser must be installed through its official set
 Point UV_PROJECT_ENVIRONMENT at an approved standard venv when generated redirectors
 are blocked. Never disable host protection. The pip quickstart needs no uv or Node.
 Frontend changes additionally need Node 24.21.0 and the dashboard's npm ci,
-typecheck, test, build and audit commands. The curated public-source candidate has
+typecheck, test, build and audit commands. The curated public source preview has
 an explicitly selected portable test suite; full research regression counts are separate.
 The six frontend unit tests use Node's built-in runner and TypeScript stripping;
 keep new unit test files in the explicit package.json test command. See the

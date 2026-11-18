@@ -1,9 +1,12 @@
 # Apache-2.0 application record
 
-This new source candidate supersedes the sealed 176-file candidate for local
-licensing review only. The predecessor and its archive/hashes remain unchanged.
-Version remains 0.9.1a1. The exact selected bytes are in SOURCE-INVENTORY.json;
-the adjacent delivery manifest identifies the new commit and archive checksum.
+This historical application record describes the source candidate that superseded
+the sealed 176-file candidate during local licensing review. The predecessor and
+its archive/hashes remain unchanged. The source preview is now public; see
+[current status](release-readiness.md).
+Version remains 0.9.1a1. SOURCE-INVENTORY.json and the private delivery manifest
+preserve that preparation's selected bytes and archive checksum, rather than
+checksums for later documentation commits.
 
 The creator supplied these confirmations through the preparation session:
 
@@ -31,7 +34,9 @@ build transitive version are not cleared. Any subsequently discovered ownership
 restriction requires review before distributing the affected material. No rights
 beyond the creator's authority are granted.
 
-Publication remains NO-GO until a confidential vulnerability-reporting route is
-configured/tested and the creator approves the final release/action. Branding,
-independent adversarial auditing and production readiness remain unverified.
-No remote, upload, deployment or publication is performed by this preparation.
+At the licensing-review stage, confidential reporting and owner release approval
+were still outstanding. The owner subsequently authorized the public source preview;
+GitHub reporting is enabled and email operation is owner-confirmed. See
+[remaining reporting checks](security-reporting-setup.md). Trademark clearance,
+independent adversarial auditing and production readiness remain unresolved. This
+license record does not clear any additional binary/model distribution.
