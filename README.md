@@ -11,9 +11,15 @@ Those instructions must not become permission to read a private file or send dat
 somewhere new. Zyntrava separates the agent's proposal from the authority to execute
 it, and records what was allowed, rejected or actually run.
 
-**Public source developer preview · version 0.9.1a1 · Apache-2.0 for cleared original
-source.** Independent adversarial auditing is incomplete. This is not a production
+**Local security-review candidate · version 0.9.2a1 · Apache-2.0 for cleared original
+source.** This development branch is not a new public release. Independent adversarial
+auditing is incomplete. This is not a production
 security service; task recovery after a block remains unreliable.
+
+The [v0.9.2 review guide](docs/v0.9.2-security-hardening.md) explains execution
+uncertainty, durable release reservations, session retirement and the opt-in strict
+profile. Existing release databases need operator review before count release;
+they are never silently assigned fresh budgets.
 
 [Quickstart](#first-run) · [Integration](docs/developer-integration.md) ·
 [Architecture](docs/developer-architecture.md) · [Evidence](docs/preview-results.md) ·
@@ -108,6 +114,9 @@ activates is not a successful block.** Live behavior varies; preserve failures.
 
 ## Observed experimental results
 
+These neural measurements belong to earlier source revisions, not a new v0.9.2
+model evaluation. Historical evidence and negative results remain unchanged.
+
 The included [historical reference](evidence/reference-demo/summary.json) contains
 two developer-authored local Qwen tasks:
 
@@ -131,9 +140,11 @@ established.
 
 **Build only reviewed, trusted source/configuration**, in a disposable workspace
 without privileged credentials or personal files. Next.js 16.4.6 still contains
-an **unpatched vendored picomatch copy**. No untrusted-input route was identified
-in the supported Python-served static runtime, but builds remain a genuine risk.
-A zero-finding npm audit does not cover that bundled copy. Read the
+the previously assessed vendored picomatch copy. **GHSA-fc5q-39xc-vjpf was withdrawn
+on 18 November 2026**; this is not a released patch. Costly glob patterns remain,
+and no untrusted-input route was identified in the supported static runtime.
+A zero-finding npm audit does not cover that bundled copy. Trusted-build restrictions
+remain in place. Read the
 [dependency assessment](docs/dependency-advisory.md).
 
 CI remains manual-only: a reviewed matching main SHA and explicit trust

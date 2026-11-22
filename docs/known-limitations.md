@@ -1,5 +1,17 @@
 # Known limitations
 
+- Local v0.9.2 hardening is a review candidate, not a released or audited fix.
+  Uncertain tool dispatch halts the supported session/run; operator reconciliation
+  is required. There is no global deduplication across deliberately new sessions
+  or trusted applications that start new runs. General exactly-once is not claimed.
+- Release reservations persist in the audit database, not a tamper-proof external
+  service. Deleting/rolling back state, changing workspace identity or resuming old
+  classified history requires operator review. Legacy state cannot safely infer
+  unused budgets from missing audit rows and is not auto-migrated.
+- The strict profile is opt-in and does not support legacy count-send permissions;
+  it rejects that combination explicitly. Classification remains operator-owned,
+  and its diagnostics do not discover every secret or establish arbitrary DLP.
+  See [candidate review and migration](v0.9.2-security-hardening.md).
 - Registered broker-mediated tools only. Registering an alternate executor can
   bypass coverage; arbitrary AI agents, shell/native/MCP tools and the OS are not protected.
 - Recovery after denial is unreliable. The two-task example does not replace
@@ -24,9 +36,9 @@
 - Automated axe checks and a mobile/browser journey cover selected criteria, not
   full WCAG conformance or screen-reader certification. Fresh venvs are not clean OS VMs.
 - The Vitest/picomatch 4.0.7 development chain was removed without dropping tests.
-  Next.js 16.4.6 still vendors picomatch (tagged upstream build pins 4.0.1), with
-  the same locally reproduced ReDoS behavior. No patched upstream release exists
-  at assessment time. Use only trusted build source/configuration; a clean npm
+  Next.js 16.4.6 still vendors the assessed matcher (upstream build pins 4.0.1).
+  GHSA-fc5q-39xc-vjpf was withdrawn on 18 November 2026, not fixed by a new release;
+  costly patterns remain reproducible. Use only trusted build source/configuration; a clean npm
   audit is not a complete bundled-code audit. No input route from the supported
   Python/static-dashboard runtime was found. See [assessment](dependency-advisory.md).
 - GitHub private vulnerability reporting is enabled and its public entry point was

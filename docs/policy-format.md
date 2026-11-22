@@ -1,5 +1,22 @@
 # Policy format v1
 
+## Local v0.9.2 candidate changes
+
+The legacy JSON format/digest defaults are preserved. `profile: "strict"` is an
+explicit opt-in requiring closed POST permissions, nonempty sensitive roots and
+operator acknowledgment of classified read scopes. It does not silently tighten
+legacy policies. See [strict profile and migration](v0.9.2-security-hardening.md).
+
+Release attempts now reserve atomically in the operator-owned audit database's
+non-expiring budget tables before source access. They survive new sessions,
+policy reloads, audit-row retention and broker restarts. Exceptions/uncertain
+delivery do not refund attempts. A legacy/missing/inconsistent ledger fails
+closed, including when old audit rows were purged. There is no automatic migration
+or model-accessible reset. The historical lifetime description below applies to
+v0.9.1 and earlier; it is preserved as migration context.
+
+## Historical Phase 4 / v0.9.1 budget behavior
+
 Phase 4 migration: `ReleaseRule.max_releases` is an integer 1–128, default **1**.
 This deliberately tightens old grants that omitted a repeat budget. Each exact
 source/destination counter is broker-wide and survives new sessions/policy reloads;

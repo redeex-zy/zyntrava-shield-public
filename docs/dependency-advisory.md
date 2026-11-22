@@ -1,5 +1,24 @@
 # Picomatch advisory assessment — 17 November 2026
 
+## Dated status correction — 22 November 2026
+
+The [official GitHub advisory](https://github.com/advisories/GHSA-fc5q-39xc-vjpf)
+now records withdrawal on **18 November 2026**, updated 19 November, stating that
+this is not a security issue. This corrects the current classification; it is
+not a released patch or deletion of the old slowdown evidence. The original
+17 November assessment below remains historical.
+
+The local v0.9.2 review recheck returned zero npm audit findings with the unchanged
+lockfile dependency versions. npm's dependency graph still does not model the
+compiled matcher inside Next. A zero result therefore cannot establish that the
+vendor code was patched or that its costly patterns are absent. The former local
+high-advisory result and the current withdrawn record describe different dates.
+Keep trusted-source/configuration builds, manual reviewed-SHA/read-only CI and
+source-only distribution restrictions; do not enable untrusted glob input or
+apply an arbitrary dependency override. No dependency was upgraded for v0.9.2.
+
+## Original assessment
+
 This dated assessment records the 0.9.1a1 source preview's development-tool
 exposure. It does not patch picomatch upstream or eliminate all vulnerable bundled
 code. The owner subsequently authorized limited source publication subject to the
