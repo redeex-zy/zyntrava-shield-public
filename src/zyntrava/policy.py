@@ -112,6 +112,13 @@ class Policy(StrictModel):
     rules: tuple[Rule, ...] = Field(max_length=128)
     sensitive_roots: tuple[str, ...] = ("sensitive",)
     release_rules: tuple[ReleaseRule, ...] = Field(default=(), max_length=16)
+    # Omit legacy defaults so existing policy JSON/digests remain byte-compatible.
+    profile: Literal["legacy", "strict"] = Field(
+        default="legacy", exclude_if=lambda value: value == "legacy"
+    )
+    sensitive_reads_acknowledged: bool = Field(
+        default=False, exclude_if=lambda value: value is False
+    )
 
     @field_validator("sensitive_roots")
     @classmethod
@@ -133,7 +140,57 @@ class Policy(StrictModel):
             for rule in self.release_rules
         ):
             raise ValueError("release sources must be explicitly classified as sensitive")
+        if self.profile == "strict":
+            hazards = [e.rule for e in self.diagnostics() if e.category == "policy_error"]
+            if hazards:
+                raise ValueError("Strict policy configuration rejected: " + ", ".join(hazards))
         return self
+
+    def diagnostics(self) -> tuple[Evidence, ...]:
+        """Fixed configuration diagnostics only; never inspect data or infer model intent."""
+        result = []
+        severity = "policy_error" if self.profile == "strict" else "policy_warning"
+        if not self.sensitive_roots:
+            result.append(
+                Evidence(
+                    category=severity,
+                    rule="empty_sensitive_roots",
+                    detail="Source classification absent; credential regexes are incomplete.",
+                )
+            )
+        for rule in self.rules:
+            if rule.tool == "post_message" and rule.effect != "deny":
+                if not rule.body_fields or not rule.exact_body_fields:
+                    result.append(
+                        Evidence(
+                            category=severity,
+                            rule="open_message_schema",
+                            detail="Strict outgoing permissions require explicit exact fields.",
+                        )
+                    )
+            if rule.tool == "read_file" and rule.effect == "allow" and rule.path_prefix:
+                if any(
+                    within(root, rule.path_prefix) or within(rule.path_prefix, root)
+                    for root in self.sensitive_roots
+                ):
+                    result.append(
+                        Evidence(
+                            category="policy_warning"
+                            if self.sensitive_reads_acknowledged
+                            else severity,
+                            rule="classified_read_permission",
+                            detail="Read scope overlaps classified data; operator review required.",
+                        )
+                    )
+        if self.release_rules and self.profile == "strict":
+            result.append(
+                Evidence(
+                    category="policy_error",
+                    rule="strict_count_release_unsupported",
+                    detail="Strict message schemas do not support legacy count-send permissions.",
+                )
+            )
+        return tuple(result)
 
     @property
     def digest(self) -> str:
@@ -309,3 +366,26 @@ def default_policy(
             }
         )
     return policy
+
+
+def strict_status_policy(endpoint: str) -> Policy:
+    """Opt-in fixed status workflow; does not change default_policy or legacy permissions."""
+    return Policy(
+        version=1,
+        name="strict-local-status",
+        profile="strict",
+        sensitive_roots=("sensitive",),
+        rules=(
+            Rule(
+                id="read-status", tool="read_file", effect="allow", path_prefix="public/status.txt"
+            ),
+            Rule(
+                id="send-status",
+                tool="post_message",
+                effect="allow",
+                destination=endpoint,
+                body_fields=(("status", "ready"),),
+                exact_body_fields=True,
+            ),
+        ),
+    )

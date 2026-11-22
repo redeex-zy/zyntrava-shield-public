@@ -13,7 +13,19 @@ from pydantic_ai.usage import UsageLimits
 
 from zyntrava.adapters.feedback import tool_result
 from zyntrava.broker import Broker
-from zyntrava.models import ToolRequest
+from zyntrava.models import Outcome, ToolRequest
+
+
+class AgentExecutionUncertain(RuntimeError):
+    """Fatal supported-run stop, not model retry feedback or business-task success."""
+
+
+def _tool_result(outcome: Outcome, denial_feedback: bool) -> str:
+    if outcome.execution == "unknown":
+        raise AgentExecutionUncertain(
+            "Tool execution is uncertain; run stopped for operator review. Do not retry."
+        )
+    return tool_result(outcome, denial_feedback)
 
 
 def _build_agent(
@@ -37,7 +49,7 @@ def _build_agent(
     @agent.tool(sequential=True)
     def read_file(ctx: RunContext[None], path: str) -> str:
         """Read an authorized UTF-8 file in the controlled workspace."""
-        return tool_result(
+        return _tool_result(
             broker.submit(session_id, ToolRequest(tool="read_file", arguments={"path": path})),
             denial_feedback,
         )
@@ -45,7 +57,7 @@ def _build_agent(
     @agent.tool(sequential=True)
     def write_file(ctx: RunContext[None], path: str, content: str) -> str:
         """Propose creation of a report file, subject to operator approval."""
-        return tool_result(
+        return _tool_result(
             broker.submit(
                 session_id,
                 ToolRequest(tool="write_file", arguments={"path": path, "content": content}),
@@ -56,7 +68,7 @@ def _build_agent(
     @agent.tool(sequential=True)
     def post_message(ctx: RunContext[None], url: str, body: str) -> str:
         """Send a permitted message to an explicitly allowed local lab receiver."""
-        return tool_result(
+        return _tool_result(
             broker.submit(
                 session_id, ToolRequest(tool="post_message", arguments={"url": url, "body": body})
             ),
@@ -68,7 +80,7 @@ def _build_agent(
         @agent.tool(sequential=True)
         def fetch_page(ctx: RunContext[None], url: str) -> str:
             """Fetch a page from an explicitly authorized numeric-loopback lab endpoint."""
-            return tool_result(
+            return _tool_result(
                 broker.submit(session_id, ToolRequest(tool="fetch_page", arguments={"url": url})),
                 denial_feedback,
             )
@@ -78,7 +90,7 @@ def _build_agent(
         @agent.tool(sequential=True)
         def export_count(ctx: RunContext[None], path: str, url: str) -> str:
             """Release only a record count through an explicitly granted trusted projector."""
-            return tool_result(
+            return _tool_result(
                 broker.submit(
                     session_id,
                     ToolRequest(tool="export_count", arguments={"path": path, "url": url}),
@@ -89,8 +101,10 @@ def _build_agent(
     return agent
 
 
-def run_agent(model: Model, broker: Broker, prompt: str) -> str:
-    return asyncio.run(run_agent_detailed(model, broker, prompt))[1].output
+def run_agent(model: Model, broker: Broker, prompt: str, *, retire_on_exit: bool = False) -> str:
+    return asyncio.run(run_agent_detailed(model, broker, prompt, retire_on_exit=retire_on_exit))[
+        1
+    ].output
 
 
 async def run_agent_detailed(
@@ -102,27 +116,32 @@ async def run_agent_detailed(
     enable_fetch: bool = False,
     enable_release: bool = False,
     denial_feedback: bool = False,
+    retire_on_exit: bool = False,
 ) -> tuple[str, AgentRunResult[str]]:
     if len(prompt) > 32768:
         raise ValueError("prompt exceeds the 32 Ki-character source limit")
     session_id = broker.create_session()
-    broker.observe(session_id, prompt, "user")
-    result = await _build_agent(
-        model,
-        broker,
-        session_id,
-        enable_fetch=enable_fetch,
-        enable_release=enable_release,
-        denial_feedback=denial_feedback,
-    ).run(
-        prompt,
-        usage_limits=UsageLimits(request_limit=8, tool_calls_limit=8),
-        model_settings={
-            "temperature": 0.2,
-            "max_tokens": 512,
-            "seed": seed,
-            "parallel_tool_calls": False,
-        },
-        timeout=90,
-    )
-    return session_id, result
+    try:
+        broker.observe(session_id, prompt, "user")
+        result = await _build_agent(
+            model,
+            broker,
+            session_id,
+            enable_fetch=enable_fetch,
+            enable_release=enable_release,
+            denial_feedback=denial_feedback,
+        ).run(
+            prompt,
+            usage_limits=UsageLimits(request_limit=8, tool_calls_limit=8),
+            model_settings={
+                "temperature": 0.2,
+                "max_tokens": 512,
+                "seed": seed,
+                "parallel_tool_calls": False,
+            },
+            timeout=90,
+        )
+        return session_id, result
+    finally:
+        if retire_on_exit:
+            broker.retire_session(session_id)

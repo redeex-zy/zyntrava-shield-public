@@ -11,17 +11,19 @@ from typing import Any, Literal
 from uuid import uuid4
 
 from zyntrava.audit import AuditStore
+from zyntrava.budgets import BudgetStateError, ReleaseBudgets
 from zyntrava.detection import instructions_in, secrets_in
 from zyntrava.models import CountArgs, Decision, Outcome, ReadArgs, ToolRequest
 from zyntrava.paths import within
 from zyntrava.policy import Policy
-from zyntrava.tools import ACTION_ERRORS, LabTools, parse_action
+from zyntrava.tools import ACTION_ERRORS, BeforeEffectError, LabTools, parse_action
 
 
 @dataclass
 class Session:
     sensitive_read: bool = False
     actions: int = 0
+    halted: bool = False
 
 
 @dataclass(frozen=True)
@@ -44,18 +46,19 @@ class Broker:
     approval_ttl: int = 300
     _sessions: dict[str, Session] = field(default_factory=dict, init=False, repr=False)
     _pending: dict[str, Pending] = field(default_factory=dict, init=False, repr=False)
-    _release_counts: dict[tuple[str, str], int] = field(
-        default_factory=dict, init=False, repr=False
-    )
+    _budgets: ReleaseBudgets = field(init=False, repr=False)
     _lock: Any = field(default_factory=threading.RLock, init=False, repr=False)
     _audit_key: bytes = field(
         default_factory=lambda: secrets.token_bytes(32), init=False, repr=False
     )
 
+    def __post_init__(self) -> None:
+        self._budgets = ReleaseBudgets(self.audit.path, self.tools.root)
+
     def create_session(self) -> str:
         with self._lock:
             if len(self._sessions) >= 1000:
-                raise ValueError("session capacity reached; restart the local broker")
+                raise ValueError("session capacity reached; operator must retire finished sessions")
             session_id = str(uuid4())
             self._sessions[session_id] = Session()
             return session_id
@@ -153,15 +156,34 @@ class Broker:
                 "session_action_budget",
                 "Session action budget exceeded; execution stopped.",
             )
+        if session.halted:
+            decision = self.policy.deny(
+                "execution_halted",
+                "session_halted",
+                "Uncertain execution requires operator review.",
+            )
         if decision.effect == "allow" and request.tool == "export_count":
             release = CountArgs.model_validate(request.arguments)
-            used = self._release_counts.get((release.path, release.url), 0)
-            if used >= self.policy.release_budget(release):
-                decision = self.policy.deny(
-                    "release_budget_exhausted",
-                    "release_budget",
-                    "Operator release budget exhausted for this broker lifetime and scope.",
+            try:
+                reserved = self._budgets.reserve(
+                    release.path, release.url, self.policy.release_budget(release)
                 )
+            except (OSError, sqlite3.Error, BudgetStateError):
+                session.halted = True
+                decision = self.policy.deny(
+                    "release_state_unavailable",
+                    "release_state",
+                    "Release state is unavailable or requires operator migration; not executed.",
+                )
+            else:
+                if reserved:
+                    session.sensitive_read = True
+                else:
+                    decision = self.policy.deny(
+                        "release_budget_exhausted",
+                        "release_budget",
+                        "Operator release budget exhausted for this durable workspace scope.",
+                    )
         status: Literal["allowed", "blocked", "sent_for_approval"] = (
             "blocked"
             if decision.effect == "deny"
@@ -169,13 +191,21 @@ class Broker:
             if decision.effect == "approve" and not approved
             else "allowed"
         )
-        event_id = self._record(session_id, request, decision, status, "not_run")
-        if status == "blocked":
-            return Outcome(event_id=event_id, status=status, execution="not_run", decision=decision)
         if status == "sent_for_approval":
             self._expire_pending()
             if len(self._pending) >= 1000:
-                raise ValueError("approval capacity reached")
+                decision = self.policy.deny(
+                    "approval_capacity", "approval_capacity", "Approval queue is full; not queued."
+                )
+                status = "blocked"
+        try:
+            event_id = self._record(session_id, request, decision, status, "not_run")
+        except Exception:
+            session.halted = True
+            raise
+        if status == "blocked":
+            return Outcome(event_id=event_id, status=status, execution="not_run", decision=decision)
+        if status == "sent_for_approval":
             approval_id = str(uuid4())
             self._pending[approval_id] = Pending(
                 session_id,
@@ -196,24 +226,36 @@ class Broker:
             tool, args = parse_action(request)
             if tool == "export_count" and isinstance(args, CountArgs):
                 session.sensitive_read = True  # Release never clears session confidentiality.
-                # Consume before source access, including invalid documents/uncertain I/O.
-                scope = (args.path, args.url)
-                self._release_counts[scope] = self._release_counts.get(scope, 0) + 1
+                # Durable reservation already committed before pre-effect audit/source access.
                 output = self.tools.execute(tool, args, count_limit=self.policy.count_limit(args))
             else:
                 output = self.tools.execute(tool, args)
             if tool == "read_file" and isinstance(args, ReadArgs):
                 if any(within(root, args.path) for root in self.policy.sensitive_roots):
                     session.sensitive_read = True
-            self.observe(session_id, output, "tool")
-            execution: Literal["succeeded", "failed"] = "succeeded"
-        except ACTION_ERRORS:
+            execution: Literal["succeeded", "failed", "unknown"] = "succeeded"
+        except BeforeEffectError:
             output = None  # Do not expose exception paths, server bodies or secret values.
             execution = "failed"
+        except Exception:
+            # A transport/filesystem/custom-executor failure cannot certify absence of effects.
+            output = None
+            execution = "unknown"
+            session.halted = True
+        if execution == "succeeded":
+            try:
+                if output is None:
+                    raise ValueError("Executor did not return a bounded text result.")
+                self.observe(session_id, output, "tool")
+            except Exception:
+                output = None
+                execution = "unknown"
+                session.halted = True
         try:
             event_id = self._record(session_id, request, decision, status, execution, "execution")
-        except (OSError, sqlite3.Error):
+        except Exception:
             # An effect may already have occurred. Never mislabel it blocked or safe to retry.
+            session.halted = True
             return Outcome(event_id=event_id, status=status, execution="unknown", decision=decision)
         return Outcome(
             event_id=event_id, status=status, execution=execution, decision=decision, output=output
@@ -228,7 +270,8 @@ class Broker:
         with self._lock:
             session = self._session(session_id)
             forbidden = (
-                len(text) > 16384
+                session.halted
+                or len(text) > 16384
                 or bool(secrets_in(text))
                 or (self.mode == "full" and session.sensitive_read)
             )
@@ -263,9 +306,49 @@ class Broker:
 
     def _expire_pending(self) -> None:
         now = time.monotonic()
-        for key in tuple(self._pending):
-            if self._pending[key].expires <= now:
+        expired = [(key, p) for key, p in self._pending.items() if p.expires <= now]
+        # Invalidate all first: audit failure must not revive any expired authorization.
+        for key, _ in expired:
+            del self._pending[key]
+        for key, pending in expired:
+            self._approval_terminal(key, pending, "approval_expired")
+
+    def _approval_terminal(self, approval_id: str, pending: Pending, reason: str) -> None:
+        self.audit.append(
+            session_id=pending.session_id,
+            approval_id=approval_id,
+            phase="approval",
+            tool=ToolRequest.model_validate_json(pending.request_json).tool,
+            status="blocked",
+            execution="not_run",
+            reason=reason,
+            detected=False,
+            simulated=self.simulated,
+        )
+
+    def retire_session(self, session_id: str) -> None:
+        """Trusted operator only; never register with a model or expose to agent credentials.
+
+        Invalidates the identifier and every pending grant before auditing retirement.
+        It does not reset release budgets or resume old model history in a clean context.
+        """
+        with self._lock:
+            self._session(session_id)
+            del self._sessions[session_id]
+            cancelled = [(k, p) for k, p in self._pending.items() if p.session_id == session_id]
+            for key, _ in cancelled:
                 del self._pending[key]
+            for key, pending in cancelled:
+                self._approval_terminal(key, pending, "session_retired")
+            self.audit.append(
+                session_id=session_id,
+                phase="session",
+                tool=None,
+                status="retired",
+                execution="not_run",
+                detected=False,
+                simulated=self.simulated,
+            )
 
     def approvals(self) -> list[dict[str, Any]]:
         with self._lock:

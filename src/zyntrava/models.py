@@ -61,6 +61,14 @@ class Decision(StrictModel):
 
 
 class Outcome(StrictModel):
+    """Execution certainty, separate from authorization and business-task success.
+
+    not_run: dispatch did not start (including pending approval).
+    failed: the trusted executor establishes failure before any effect.
+    succeeded: the supported tool completed; this is not a business receipt.
+    unknown: dispatch may have produced an effect; never automatically retry.
+    """
+
     event_id: str
     status: Literal["allowed", "blocked", "sent_for_approval"]
     execution: Literal["not_run", "succeeded", "failed", "unknown"]
