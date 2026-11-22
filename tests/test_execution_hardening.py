@@ -100,7 +100,9 @@ def test_post_effect_uncertainty_halts_session_without_duplicate(broker, monkeyp
         assert retry.status == "blocked" and retry.execution == "not_run"
         assert retry.decision.evidence[0].rule == "session_halted"
         assert len(receipts) == 1
-        assert broker.final_answer(session, "Claimed completion").output is None
+        answer = broker.final_answer(session, "Claimed completion")
+        assert answer.output is None
+        assert answer.decision.evidence[0].category == "execution_halted"
         assert "SYNTHETIC_AUDIT_ERROR" not in json.dumps(broker.audit.events())
 
 

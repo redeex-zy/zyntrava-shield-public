@@ -160,7 +160,7 @@ class Broker:
             decision = self.policy.deny(
                 "execution_halted",
                 "session_halted",
-                "Uncertain execution requires operator review.",
+                "Session halted; operator review is required before any continuation.",
             )
         if decision.effect == "allow" and request.tool == "export_count":
             release = CountArgs.model_validate(request.arguments)
@@ -277,6 +277,12 @@ class Broker:
             )
             decision = (
                 self.policy.deny(
+                    "execution_halted",
+                    "session_halted",
+                    "Final output withheld because this session requires operator review.",
+                )
+                if session.halted
+                else self.policy.deny(
                     "sensitive_answer_withheld",
                     "final_answer_boundary",
                     "Final answer exceeds output scope or follows a classified source.",
