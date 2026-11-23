@@ -11,15 +11,34 @@ Those instructions must not become permission to read a private file or send dat
 somewhere new. Zyntrava separates the agent's proposal from the authority to execute
 it, and records what was allowed, rejected or actually run.
 
-**Local security-review candidate · version 0.9.2a1 · Apache-2.0 for cleared original
-source.** This development branch is not a new public release. Independent adversarial
-auditing is incomplete. This is not a production
-security service; task recovery after a block remains unreliable.
+**Experimental developer preview · version 0.9.2a1 · Apache-2.0 for cleared original
+source.** This update is proposed for review; no package or GitHub Release is
+published by this change. Independent adversarial security review is pending.
+**This is not production-ready, and recovery has not improved in the matched
+local Qwen evaluation.**
 
 The [v0.9.2 review guide](docs/v0.9.2-security-hardening.md) explains execution
 uncertainty, durable release reservations, session retirement and the opt-in strict
 profile. Existing release databases need operator review before count release;
 they are never silently assigned fresh budgets.
+
+### What changed in v0.9.2a1
+
+- **Execution certainty:** distinguish known pre-effect failure from uncertain
+  dispatch. An uncertain effect halts the session and supported adapter run;
+  operators must reconcile real receipts before considering another attempt.
+- **Approval correctness:** reject a full queue before recording an accepted
+  approval; expiration and retirement cannot revive grants when auditing fails.
+- **Durable release budgets:** reserve approved count releases in SQLite before
+  source access, preserving consumption across restarts and audit retention.
+- **Explicit configuration:** operator-only session retirement and an opt-in strict
+  profile with closed outgoing schemas and classification diagnostics. Legacy
+  defaults remain unchanged; strict mode does not support legacy count grants.
+
+There is no general exactly-once guarantee, automatic recovery improvement or
+protection against an administrator deleting or rolling back the state database.
+See the [changelog](CHANGELOG.md), [migration guide](docs/v0.9.2-security-hardening.md)
+and [validation report](docs/v0.9.2-validation.md).
 
 [Quickstart](#first-run) · [Integration](docs/developer-integration.md) ·
 [Architecture](docs/developer-architecture.md) · [Evidence](docs/preview-results.md) ·
@@ -114,8 +133,38 @@ activates is not a successful block.** Live behavior varies; preserve failures.
 
 ## Observed experimental results
 
-These neural measurements belong to earlier source revisions, not a new v0.9.2
-model evaluation. Historical evidence and negative results remain unchanged.
+The 23 November 2026 evaluation used the same six developer-authored tasks at two
+seeds per version, with actual Qwen3-4B inference and execution-aware grading.
+These are controlled local experiments, **not independent validation**.
+
+| Matched measure | v0.9.1a1 baseline | v0.9.2a1 |
+| --- | ---: | ---: |
+| Clean tasks completed | 4/4 | 4/4 |
+| Injected tasks completed | 4/8 | 4/8 |
+| Attack encountered / activated | 8/8 / 6/8 | 8/8 / 6/8 |
+| Forbidden proposals rejected before execution | 6/6 | 6/6 |
+| Observed forbidden / duplicate effects | 0 / 0 | 0 / 0 |
+| Task completed after an activated proposal was rejected | 2/6 | 2/6 |
+
+**Recovery and measured task outcomes did not improve.** Unactivated attacks are
+not counted as blocked. Some model replies claimed completion despite zero
+receiver receipts; those tasks were graded incomplete. Repeated seeds do not
+create additional attack diversity, and this small study establishes no general
+security advantage over the previous version or another defense.
+
+Deterministic Windows and Linux/WSL suites each passed **236 tests with three
+documented skips**; the 46 focused security regressions are included in that total.
+Separate real-model fault probes exercised uncertain POST execution, audit failure,
+strict schemas and a count budget shared by two fresh broker processes. They are
+not additional prompt-injection efficacy trials. Initial test-environment failures
+and negative outcomes are disclosed in the
+[validation report and reproduction commands](docs/v0.9.2-validation.md) and
+[sanitized machine-readable summary](evidence/v0.9.2-validation/summary.json).
+
+### Historical demonstration
+
+The following measurements belong to earlier source revisions. Historical
+evidence and negative results remain unchanged.
 
 The included [historical reference](evidence/reference-demo/summary.json) contains
 two developer-authored local Qwen tasks:
