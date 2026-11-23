@@ -3,6 +3,11 @@
 ## Supported experimental version
 
 **0.9.1a1** is the version currently accepted for experimental security review.
+The proposed **0.9.2a1** source update adds narrowly scoped hardening and is also
+accepted for experimental review. Independent adversarial review is pending;
+no independent audit has passed. Send sensitive findings through the private
+channels below. See [the boundaries and migration notes](docs/v0.9.2-security-hardening.md)
+and [dated local validation](docs/v0.9.2-validation.md).
 This repository is a **public source-only developer preview**. There is no supported
 stable/production release, response-time commitment or promised support lifetime.
 Independent adversarial security auditing is incomplete. No security tool guarantees

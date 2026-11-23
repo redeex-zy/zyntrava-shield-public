@@ -48,3 +48,38 @@ executor and bypassing submission invalidates the coverage claim.
 `Outcome.status == "blocked"` is authorization data, not the service's business
 status. Whether the original task completes is graded from receiver/filesystem state.
 Experimental recovery modules are not part of the default integration.
+
+## Local v0.9.2 candidate
+
+`execution="failed"` now means a known failure without a protected write/network
+effect or released tool data. A dispatch whose effects cannot be established uses
+`unknown`, withholds output and halts further dispatch/final-answer release for
+that session. The adapter raises `AgentExecutionUncertain` and stops the run;
+model denial feedback is not the enforcement mechanism. Do not automatically
+start a replacement run after this exception. Inspect real service/file receipts
+with the trusted operator. A successful HTTP response is not business-task proof.
+
+`broker.retire_session(session_id)` is **operator-only**: it invalidates the ID and
+pending grants, even when retirement auditing fails. It does not erase model
+memory or permit old classified history to be resumed in a fresh session. No
+agent tool/API route exposes retirement. Completed SDK callers may use
+`retire_on_exit=True` with `run_agent`/`run_agent_detailed`; this also cancels
+pending approvals, so leave it false if an operator still needs to resolve them.
+The legacy default is false. Retire finished sessions to stay below the 1,000
+active-session cap; agent credentials still cannot mint/reset sessions.
+
+The strict profile is optional:
+
+```python
+from zyntrava.policy import strict_status_policy
+
+policy = strict_status_policy(owned_receiver_url)
+# Allows public/status.txt and only {"status":"ready"} to that exact loopback URL.
+# This does not register another tool or authorize an arbitrary network destination.
+```
+
+Run `python examples/strict_status.py` in the installed environment for a scripted
+Pydantic AI example with actual broker/file/HTTP effects. The extra-field proposal
+is rejected, exactly one valid report is received, and the finished session is
+retired. This is not neural inference or a new attack-success benchmark.
+See [migration, diagnostics and limitations](v0.9.2-security-hardening.md).

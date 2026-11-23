@@ -9,18 +9,25 @@ from pathlib import Path
 from typing import Any
 from uuid import uuid4
 
+from zyntrava.budgets import initialize_release_state
+
 
 class AuditStore:
     def __init__(self, path: Path) -> None:
         self.path = path
         path.parent.mkdir(parents=True, exist_ok=True)
+        fresh = not path.exists()
         with self.connect() as conn:
             conn.execute("PRAGMA journal_mode=WAL")
+            conn.execute("BEGIN IMMEDIATE")
             conn.execute(
                 "CREATE TABLE IF NOT EXISTS events "
                 "(seq INTEGER PRIMARY KEY, id TEXT UNIQUE NOT NULL, "
                 "created_at TEXT NOT NULL, payload TEXT NOT NULL)"
             )
+            if fresh:
+                # Existing state is never inferred unused from possibly purged audit rows.
+                initialize_release_state(conn)
 
     @contextmanager
     def connect(self) -> Iterator[sqlite3.Connection]:
